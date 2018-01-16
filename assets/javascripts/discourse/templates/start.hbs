@@ -14,7 +14,9 @@
 </div>
 
 <div class="centered">
-  {{landing-text content="landing.map_tagline" classes="large centered tagline"}}
+  <div class="scroll-to-map" {{action 'scrollToMap'}}>
+    {{landing-text content="landing.map_tagline" classes="large centered tagline"}}
+  </div>
   {{map-component locations=locations zoom='2' center=mapCenter}}
   {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
 </div>
