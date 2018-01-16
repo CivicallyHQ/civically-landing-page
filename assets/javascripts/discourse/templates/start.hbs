@@ -1,0 +1,20 @@
+<div class="top">
+  <div class="main">
+    {{landing-text content="landing.tagline" classes="large tagline"}}
+    {{#unless site.mobileView}}
+      <img src="/plugins/civically-landing-page/images/apart_from_community.png">
+    {{/unless}}
+  </div>
+
+  <div class="sign-up">
+    {{landing-text content='landing.sign_up' classes="large"}}
+    {{landing-text content="landing.sign_up_tagline" classes="small"}}
+    {{outlet 'create-account'}}
+  </div>
+</div>
+
+<div class="centered">
+  {{landing-text content="landing.map_tagline" classes="large centered tagline"}}
+  {{map-component locations=locations zoom='2' center=mapCenter}}
+  {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
+</div>

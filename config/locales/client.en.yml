@@ -1,0 +1,246 @@
+en:
+  js:
+    landing:
+      title: "Civically"
+      tagline: "Solve civic problems, sort out public services and be a real part of your community."
+      map_tagline: "Check if your town is on Civically yet."
+      sign_up: "Sign Up"
+      sign_up_tagline: "It's free, secure and you control your data."
+      footer_legal_title: "Civil Core Pty Ltd. All rights reserved."
+      footer_legal_text: "Civically provides self-help services at your specific direction. We are not a law firm or a substitute
+                          for an attorney or law firm. Communications between you and Civically are protected by our Privacy Policy,
+                          but not by the attorney-client privilege or as work product. We cannot provide any kind of advice,
+                          explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options,
+                          selection of forms, or strategies. Your access to our website is subject to our Terms of Service."
+      contact:
+        title: "Contact Civically"
+        failed: "Contact details failed to send. Please email contact@bigcivically.com."
+        name:
+          label: "Name"
+          placeholder: "Your full name"
+        phone:
+          label: "Phone"
+          placeholder: "Your work phone number"
+          valid: "<i class='fa fa-check'></i> Valid number"
+          invalid: "<i class='fa fa-times'></i> Invalid number"
+        message:
+          placeholder: "Add a message (optional)"
+        submit: "Submit"
+        succeded: "Sent. We'll be in touch shortly."
+      citizen:
+        link: "Citizens"
+        title: "Civically is For You"
+        contact:
+          email:
+            label: "Email"
+            placeholder: "Your email"
+        problem:
+          1:
+            title: "Dealing with government is hard"
+            desc: "When you have to deal with your government it's hard to know where to start.
+                   You can spend weeks trying to sort out paperwork or work with bureaucrats."
+            image_url: "/plugins/civically-landing-page/images/government_frustrated.png"
+          2:
+            title: "The law is unfair"
+            desc: "Lawyers are expensive, laws are hard to understand and the legal system is intimidating. It can seem
+                  like law is just a way for rich people to find loopholes."
+            image_url: "/plugins/civically-landing-page/images/law_unfair.png"
+          3:
+            title: "Social networks aren't communities"
+            desc: "Social networks are fun, but they can leave us unfulfilled. They're about image, and endless feeds of
+                  posts competing for our attention."
+            image_url: '/plugins/civically-landing-page/images/social_machine.png'
+        solution:
+          title: "Civically is different"
+          1:
+            title: "Take control"
+            desc: "Navigate bureaucracy, get help with a legal issue or find out what plans are being
+                   made for your neighborhood. Be on top things, rather than reacting to events."
+            image: "/plugins/civically-landing-page/images/smooth_sailing.png"
+          2:
+            title: "Really connect"
+            desc: "Help your neighbors, go to community events, or discuss civic issues.
+                   Make deeper connections."
+            image: "/plugins/civically-landing-page/images/happy_group.png"
+          3:
+            title: "Made for your benefit"
+            desc: "Civically is not designed to make its <a href='/owners'>owners</a> wealthy.
+                   We're doing this because we believe the internet can be used for
+                   building social cohesion, furthering social justice and improving people's lives.."
+            image: "/plugins/civically-landing-page/images/benefit_tree.png"
+
+      organization:
+        link: "Organizations"
+        title: "Civically is for Civic Organizations"
+        contact:
+          email:
+            label: "Email"
+            placeholder: "Your work email"
+          name:
+            label: "Organization"
+            placeholder: "Organization you work at"
+          position:
+            label: "Position"
+            placeholder: "Your title"
+        problem:
+          1:
+            title: "Staying afloat is a battle"
+            desc: "When you provide civic services, trying to keep up with the changing
+                  needs of your customers, government and society is tough. Juggling operations,
+                  budgets, staffing and technology at same time as staying relevant is a battle."
+            image_url: "/plugins/civically-landing-page/images/sos.png"
+          2:
+            title: "Competition for attention is fierce"
+            desc: "The internet seems to promise a great way to engage with your stakeholders, but
+                  you find yourself in a fierce battle for attention. Knowing how and when to engage
+                  with your supporters and customers is a business itself."
+            image_url: "/plugins/civically-landing-page/images/competition_attention.png"
+        solution:
+          title: "Civically levels the playing field"
+          1:
+            title: "Strength in numbers"
+            desc: "Civically is a platform where any public or civic service can connect to a local place. Members of
+                  the place have one place where they can find an array of services, and other people in their place.
+                  One place with multiple services has greater power online than multiple standalone services."
+            diagram_1:
+              title: "The battle for attention online"
+              url: "/plugins/civically-landing-page/images/traditional-competition.png"
+            diagram_2:
+              title: "What Civically does for civic services"
+              url: "/plugins/civically-landing-page/images/civically-competition.png"
+          2:
+            title: "Meritocratic internal visibility"
+            desc: "On most platforms and search engines your visiblity is determined by how much money you have. You cannot buy
+                  visibility on Civically, it has to be earned by user reviews and independent assessments. If you're providing
+                  a valuable service to a place, we want you on our platform, regardless of how much money you have."
+            diagram_1:
+              title: "Traditional visibility"
+              url: "/plugins/civically-landing-page/images/traditional-visibility.png"
+            diagram_2:
+              title: "Visibility on Civically"
+              url: "/plugins/civically-landing-page/images/civically-visibility.png"
+          3:
+            title: "Platforms reduce costs"
+            desc: "All websites share identical features, such as pages, menus and user accounts. When you build an online civic service yourself,
+                  typically more than 3/4's of the cost is spent on recreating these identical features. This is like constructing an
+                  entirely new office building every time you want to start a new project.<br><br>
+
+                  When you add a service to Civically you're adding it to a <a href='http://platformrevolution.com/' target='_blank'>platform</a>.
+                  Each service starts as a single file of code to test the core idea. You don't need to build and maintain your own website to see
+                  whether it makes sense to make a service available online. Civically is built to work locally and scale globally, which means
+                  it is orders of magnitude cheaper than traditional online civic services."
+            diagram_1:
+              title: "Traditional cost structure"
+              url: "/plugins/civically-landing-page/images/traditional-costs.png"
+            diagram_2:
+              title: "Civically's cost structure"
+              url: "/plugins/civically-landing-page/images/civically-costs.png"
+          4:
+            title: "User engagement is built in"
+            desc: "There is a legitimate concern that providing civic services online leads to a disengagement with the service
+                  provider and the broader place. Civically makes civic organizations and their stakeholders more, rather
+                  than less, engaged.<br><br>
+
+                  The core of Civically is a user to user platform where citizens can engage with other citizens and civic organizations.
+                  Relevant members of your staff can be identified and connected to where they are needed, a knowledge base about
+                  your service is developed and your services become more transparent."
+            diagram_1:
+              title: "Traditional online constituent engagement"
+              url: "/plugins/civically-landing-page/images/traditional-engagement.png"
+            diagram_2:
+              title: "Constituent engagement on Civically"
+              url: "/plugins/civically-landing-page/images/civically-engagement.png"
+      government:
+        link: "Governments"
+        title: "Civically is for Governments"
+        contact:
+          email:
+            label: "Email"
+            placeholder: "Your work email"
+          name:
+            label: "Government"
+            placeholder: "Government you work at"
+          position:
+            label: "Position"
+            placeholder: "Your title"
+        problem:
+          1:
+            title: "Providing public services is hard"
+            desc: "Providing good, efficient services to a diverse community is hard on any level of
+                  government. Public services are not the same as consumer services. They don't always
+                  obey laws of supply and demand. Centralization is often desirable, but not without risks."
+            image_url: "/plugins/civically-landing-page/images/angry_man.png"
+          2:
+            title: "Providing online public services is hard too"
+            desc: "In public service, one size does not fit all, standards matter and budgets are tight.
+                  Developing new online services or updates to existing services often takes years,
+                  involving multiple parties, significant costs and resources. When completed, any issues
+                  with the service not only affects users, but can reflect on the service providers both
+                  administratively and politically."
+            image_url: '/plugins/civically-landing-page/images/it_problems.png'
+        solution:
+          title: "Civically makes it easier"
+          1:
+            title: "Local services in a global network"
+            desc: "Civically allows services to provide for local communities, while being part of global network. Services
+                  are different from place to place. The standard 'one size fits all' approach to online services
+                  simply doesn't work for every place. But not every place can afford to build and maintain online
+                  services.<br><br>
+
+                  Civically provides a local environment within a global network. This means each place can tailor
+                  services for their needs and also get the benefits of the network effects of a bigger network."
+            diagram_1:
+              title: "Traditional online public services"
+              url: "/plugins/civically-landing-page/images/traditional-services.png"
+            diagram_2:
+              title: "Online public services on Civically"
+              url: '/plugins/civically-landing-page/images/civically-services.png'
+          2:
+            title: "Platforms reduce costs"
+            desc: "All webites share identical features, such as pages, menus and user accounts. When you build an online public service yourself,
+                  typically more than 3/4's of the cost is spent on recreating these identical features. This is like constructing an
+                  entirely new office building every time you want to start a new project.<br><br>
+
+                  When you add a service to civically you're adding it to a <a href='http://platformrevolution.com/'>platform</a>.
+                  Each service starts as a single file of code to test the core idea.
+                  You don't need to build and maintain your own website to see whether it makes sense to make a service available online.
+                  Civically is built to work locally and scale globally, which means it is orders of magnitude cheaper than traditional online public services."
+            diagram_1:
+              title: "Traditional cost structure"
+              url: "/plugins/civically-landing-page/images/traditional-costs.png"
+            diagram_2:
+              title: "Civically's cost structure"
+              url: "/plugins/civically-landing-page/images/civically-costs.png"
+          3:
+            title: "Citizen engagement is built in"
+            desc: "There is a legitimate concern that providing public services online leads to a disengagement with the service
+                  provider and the broader place. If everything is provided online, what need is there for human interaction?
+                  Civically makes public servants and citizens more, rather than less, engaged.<br><br>
+
+                  The core of Civically is a user to user platform where citizens can engage with other citizens and public servants.
+                  Relevant public servants can be identified and connected to where they are needed, a knowledge base about
+                  each service is developed and services themselves become more transparent."
+            diagram_1:
+              title: "Traditional online engagement"
+              url: "/plugins/civically-landing-page/images/traditional-engagement.png"
+            diagram_2:
+              title: "Online engagement on Civically"
+              url: "/plugins/civically-landing-page/images/civically-engagement.png"
+      trial:
+        title: "Bring Civically to Your place"
+        citizen:
+          title: "As a Citizen"
+          text: ""
+        government:
+          title: "As a Government"
+          text: ""
+        organization:
+          title: "As an Organization"
+          text: ""
+      faq:
+        overlap: "If you believe your place should be split into two or more communties, or combined with another place,
+                  you can post a vote on the matter in your place."
+        split: "An existing Civically place will be broken into multiple communities if a majority
+              of the users of the existing place vote to do so."
+        combined: "Two or more existing Civically communities will be combined into a single place if a
+                  majority of the users of each existing place vote to do so."

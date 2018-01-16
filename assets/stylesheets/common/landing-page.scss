@@ -1,0 +1,321 @@
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+
+.landing-page {
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 80px;
+
+  .p-text {
+    letter-spacing: 1.2px;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+
+  .centered {
+    text-align: center;
+    width: 100%;
+
+    .p-text {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      max-width: 780px;
+    }
+  }
+
+  &.start {
+    padding-top: 40px;
+
+    .top {
+      display: flex;
+    }
+
+    .tagline {
+      font-size: 1.6em;
+    }
+
+    .main {
+      margin-bottom: 70px;
+      margin-right: 50px;
+
+      .large {
+        margin-bottom: 60px;
+      }
+
+      .animated-link {
+        margin-bottom: 70px;
+      }
+    }
+  }
+
+  .centered {
+    .tagline {
+      margin-top: 50px;
+      margin-bottom: 0;
+    }
+
+    .sign-up {
+      display: inline-block;
+
+      .p-text {
+        width: 100%;
+      }
+    }
+  }
+
+  .image-container {
+    flex: 0 1 auto;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .map-component {
+    display: inline-block;
+    width: 80vw;
+    height: 80vh;
+    max-width: 1000px;
+    max-height: 700px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    .locations-map.expanded {
+      width: 100%;
+    }
+  }
+
+  .sign-up {
+    max-width: 440px;
+    text-align: left;
+
+    &>.p-text {
+      padding: 0 15px;
+    }
+  }
+
+  .create-account tr {
+    white-space: nowrap;
+
+    td {
+      vertical-align: top;
+
+      &.label {
+        padding-top: 15px;
+
+        label {
+          width: 80px;
+        }
+      }
+
+      .tip {
+        margin-top: 4px;
+        display: block;
+
+        i {
+          height: 21px;
+        }
+      }
+    }
+  }
+
+  .create-account .password-confirmation {
+    display: none;
+  }
+}
+
+.landing-footer {
+  margin-top: 100px;
+  background-color: dark-light-diff($primary, $secondary, 95%, -65%);
+  border: 1px solid dark-light-diff($primary, $secondary, 90%, -65%);
+  padding: 30px;
+
+  .p-text.small {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .footer-links {
+    border-left: 2px solid $primary;
+    padding: 0 25px;
+    float: left;
+    list-style: none;
+  }
+
+  .footer-disclaimer {
+    padding-left: 100px;
+    overflow: hidden;
+  }
+}
+
+.animated-link {
+  a {
+    background-image: linear-gradient(180deg,transparent 80%,#0088cc 0);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: $primary;
+    transition: background-size .4s ease;
+  }
+
+  a:hover {
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+}
+
+.landing-image img {
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.landing-caption {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.landing-statement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+
+  &.last {
+    margin-bottom: 0;
+  }
+
+  .text-container {
+    order: 1;
+    max-width: 45%;
+  }
+
+  .landing-image {
+    &.right {
+      order: 2;
+      margin-left: 80px;
+    }
+
+    &.left {
+      order: 0;
+      margin-right: 80px;
+    }
+  }
+}
+
+.landing-paragraph {
+  margin-bottom: 100px;
+}
+
+.landing-diagram {
+  margin-top: 100px;
+  padding: 0 50px;
+  display: inline-block;
+
+  .p-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.modal .landing-contact {
+  width: 100%;
+
+  .modal-body {
+    overflow-y: auto;
+    max-height: 400px;
+    padding: 15px;
+    display: block;
+  }
+
+  .modal-footer {
+    padding: 15px;
+  }
+}
+
+.landing-contact {
+  text-align: left;
+  display: inline-block;
+  width: 350px;
+
+  .type-buttons {
+    margin-bottom: 15px;
+
+    .btn {
+      margin-right: 10px;
+    }
+  }
+
+  .modal-body {
+    display: inline-block;
+    overflow: initial;
+    max-height: initial;
+    padding: initial;
+  }
+
+  input:not(#contact-phone), .contact-message {
+    padding: 7px 10px;
+    width: 350px;
+  }
+
+  textarea.contact-message {
+    width: 350px;
+  }
+
+  #contact-phone {
+    line-height: 28px !important;
+    width: 372px;
+  }
+
+  input {
+    line-height: 22px !important;
+    height: initial !important;
+  }
+
+  .p-text {
+    margin-bottom: 30px;
+    margin: 30px 0 !important;
+  }
+
+  .input {
+    height: 80px;
+
+    input {
+      margin-bottom: 0;
+    }
+
+    label {
+      font-size: 1em;
+    }
+
+    .success {
+      color: $success;
+    }
+
+    .fail {
+      color: $danger;
+    }
+  }
+
+  .modal-footer {
+    padding: 15px 0;
+    margin-top: 10px;
+  }
+
+  #contact-phone {
+    .iti-flag {
+      background-image: url("/plugins/civically-landing-page/images/flags.png") !important;
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      .iti-flag {
+        background-image: url("/plugins/civically-landing-page/images/flags@2x.png") !important;
+      }
+    }
+  }
+
+  .contact-message {
+    height: 100px;
+  }
+}

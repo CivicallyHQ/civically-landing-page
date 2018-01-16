@@ -1,0 +1,7 @@
+<div class="text-container">
+  {{landing-text content=(concat content ".title") classes="large"}}
+  {{landing-text content=(concat content ".desc") classes="small"}}
+</div>
+<div class="landing-image {{imageSide}}">
+  <img src="{{i18n (concat content '.image_url')}}">
+</div>

@@ -1,0 +1,102 @@
+.landing-page.start {
+  padding: 0;
+
+  .top {
+    flex-direction: column;
+  }
+
+  .sign-up {
+    .modal-body {
+      padding: 5px 15px;
+    }
+  }
+
+  .main {
+    padding: 40px 20px;
+    margin-bottom: 0;
+
+    .large {
+      margin: 0;
+    }
+  }
+
+  .centered {
+    margin-top: 40px;
+  }
+
+  .map-component {
+    width: 90vw;
+    height: 80vh;
+    margin-bottom: 60px;
+  }
+}
+
+.landing-footer {
+  margin-top: 60px;
+  padding: 20px;
+
+  .footer-disclaimer {
+    padding-left: 0;
+    padding-top: 20px;
+    clear: both;
+  }
+}
+
+.landing-contact {
+  display: block;
+
+  .modal-body {
+    padding: 15px;
+    display: block;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  input, .contact-message {
+    box-sizing: border-box;
+    width: 100% !important;
+  }
+
+  #contact-phone, .intl-tel-input {
+    width: 100%;
+  }
+}
+
+.landing-page {
+  padding-top: 40px;
+
+  .p-text.title {
+    margin-bottom: 40px;
+  }
+
+  .landing-statement {
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    .text-container {
+      max-width: 100%;
+      padding: 10px;
+      order: 0;
+    }
+
+    .landing-image {
+      margin: 0;
+      padding-top: 20px;
+
+      img {
+        max-width: 90vw;
+      }
+    }
+  }
+
+  .landing-paragraph {
+    margin-bottom: 50px;
+
+    .landing-diagram {
+      margin-top: 50px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{{#d-modal-body title='landing.contact.title'}}
+  {{#if inModal}}
+    <div class='type-buttons'>
+      {{#each typeButtons as |t|}}
+        {{d-button class=t.class action='setType' actionParam=t.name label=t.label}}
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="p-text large">{{i18n 'landing.contact.title'}}</div>
+  {{/if}}
+  <div class="input">
+    <label for='contact-name'>{{i18n 'landing.contact.name.label'}}</label>
+    {{text-field value=name placeholderKey="landing.contact.name.placeholder" id="contact-name" autocorrect="off" autocapitalize="off"}}
+  </div>
+  <div class="input">
+    <label for='contact-email'>{{i18n (concat 'landing.' type '.contact.email.label')}}</label>
+    {{text-field value=email placeholderKey=(concat 'landing.' type '.contact.email.placeholder') id="contact-email" autocorrect="off" autocapitalize="off"}}
+    <div class="fail">{{emailValidationError}}</div>
+  </div>
+  <div class="input">
+    <label for='contact-phone'>{{i18n 'landing.contact.phone.label'}}</label>
+    {{phone-input id="contact-phone" phoneValidation="phoneValidation"}}
+  </div>
+  {{#if forInstitution}}
+    <div class="input">
+      <label for='contact-institution'>{{i18n (concat 'landing.' type '.contact.name.label')}}</label>
+      {{text-field value=institution placeholderKey=(concat 'landing.' type '.contact.name.placeholder') id="contact-institution" autocorrect="off" autocapitalize="off"}}
+    </div>
+    <div class="input">
+      <label for='contact-position'>{{i18n (concat 'landing.' type '.contact.position.label')}}</label>
+      {{text-field value=position placeholderKey=(concat 'landing.' type '.contact.position.placeholder') id="contact-position" autocorrect="off" autocapitalize="off"}}
+    </div>
+  {{/if}}
+  {{textarea value=message class="contact-message" placeholder=(i18n 'landing.contact.message.placeholder')}}
+{{/d-modal-body}}
+<div class="modal-footer">
+  {{d-button class='btn btn-large btn-primary' disabled=submitDisabled action="submitContact" label='landing.contact.submit'}}
+  {{conditional-loading-spinner condition=submitting size="small"}}
+  {{contactResult}}
+</div>

@@ -1,0 +1,14 @@
+en:
+  contact_mailer:
+    title: "New Contact"
+    subject_template: "New contact from %{name}"
+    text_body_template: |
+      name: %{name}
+      email: %{email}
+      phone: %{phone}
+      institution: %{institution}
+      position: %{position}
+      message: %{message}
+
+  site_settings:
+    landing_contact_email: "Email to send landing page contacts to"

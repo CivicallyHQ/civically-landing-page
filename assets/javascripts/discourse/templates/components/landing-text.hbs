@@ -1,0 +1,8 @@
+{{#if icon}}
+  <i class="fa fa-{{icon}}" aria-hidden="true"></i>
+{{/if}}
+{{#if url}}
+  <a href="{{url}}">{{{i18n content}}}</a>
+{{else}}
+  {{{i18n content}}}
+{{/if}}
