@@ -131,6 +131,7 @@
   background-color: dark-light-diff($primary, $secondary, 95%, -65%);
   border: 1px solid dark-light-diff($primary, $secondary, 90%, -65%);
   padding: 30px;
+  display: flex;
 
   .p-text.small {
     font-size: 14px;
@@ -138,15 +139,18 @@
   }
 
   .footer-links {
-    border-left: 3px solid $tertiary;
+    border-left: 2px solid $tertiary;
     padding: 0 25px;
-    float: left;
     list-style: none;
   }
 
   .footer-disclaimer {
-    padding-left: 100px;
-    overflow: hidden;
+    padding-left: 60px;
+    flex: 1;
+
+    > div:first-of-type {
+      margin-bottom: 7px;
+    }
   }
 }
 
