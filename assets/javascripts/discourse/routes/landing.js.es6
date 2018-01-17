@@ -33,6 +33,12 @@ export default Discourse.Route.extend({
     if (templateName === 'start') {
       this.controllerFor('application').set('canSignUp', false);
     }
+
+    // so the login-buttons element isn't added,
+    // otherwise there is an element id conflict with login modal
+    if (templateName === 'start' || templateName === 'citizens') {
+      this.controllerFor('create-account').set('hasAuthOptions', true);
+    }
   },
 
   actions: {

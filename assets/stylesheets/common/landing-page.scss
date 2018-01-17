@@ -22,6 +22,19 @@
       width: 90%;
       max-width: 780px;
     }
+
+    .tagline {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    .sign-up {
+      display: inline-block;
+
+      .p-text {
+        width: 100%;
+      }
+    }
   }
 
   &.start {
@@ -45,21 +58,6 @@
 
       .animated-link {
         margin-bottom: 70px;
-      }
-    }
-  }
-
-  .centered {
-    .tagline {
-      margin-top: 50px;
-      margin-bottom: 0;
-    }
-
-    .sign-up {
-      display: inline-block;
-
-      .p-text {
-        width: 100%;
       }
     }
   }

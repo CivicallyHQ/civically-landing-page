@@ -2,10 +2,10 @@ en:
   js:
     landing:
       title: "Civically"
-      tagline: "Civically helps you deal with government, navigate law and be a part of your community."
-      map_tagline: "Check if your town is on Civically yet."
+      tagline: "Civically is a new type of service. You can help improve government, make law accessible and build a real community."
+      map_tagline: "Help get your town on Civically."
       sign_up: "Sign Up"
-      sign_up_tagline: "It's free, secure and you control your data."
+      sign_up_tagline: "It's free, secure and there are no ads."
       footer_legal_title: "Civil Core Pty Ltd. ACN 618 525 983. All rights reserved."
       footer_legal_text: |
         Civically is not a law firm or a substitute for a lawyer or law firm. Communications between you and Civically are protected by our <a href='/privacy'>Privacy Policy</a>, but not by lawyer-client privilege or as work product. We cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. Your access to our website is subject to our <a href='/terms' target='blank'>Terms of Service</a>.
