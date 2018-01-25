@@ -27,7 +27,7 @@ export default Ember.Component.extend(ModalFunctionality, {
     return this.get('type') === 'government' || this.get('type') === 'organization';
   },
 
-  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'formSubmitted')
+  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'formSubmitted', 'type')
   submitDisabled() {
     if (this.get('formSubmitted')) return true;
     if (this.get('nameValidation.failed')) return true;
@@ -111,17 +111,28 @@ export default Ember.Component.extend(ModalFunctionality, {
   },
 
   actions: {
-    phoneValidation(val) {
-      let params = val ? {ok: true} : {failed: true};
+    phoneValidation(isValid, number = null) {
+      let params = isValid ? { ok: true } : { failed: true };
       let validation = InputValidation.create(params);
       this.set('phoneValidation', validation);
-      if (val) this.set('phone', val);
+
+      if (isValid && number) {
+        this.set('phone', number);
+      }
     },
 
     submitContact() {
       if (this.get('submitDisabled')) return false;
 
-      let data = this.getProperties('name', 'email', 'phone', 'message');
+      let data = this.getProperties('type', 'name', 'email');
+
+      const phone = this.get('phone');
+      const phoneEnabled = Discourse.SiteSettings.landing_contact_phone_enabled;
+      if (phone && phoneEnabled) data['phone'] = phone;
+
+      const message = this.get('message');
+      if (message) data['message'] = message;
+
       if (this.get('forInstitution')) {
         data['institution'] = this.get('institution');
         data['position'] = this.get('position');

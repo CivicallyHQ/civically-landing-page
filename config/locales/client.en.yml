@@ -21,7 +21,7 @@ en:
           valid: "<i class='fa fa-check'></i> Valid number"
           invalid: "<i class='fa fa-times'></i> Invalid number"
         message:
-          placeholder: "Add a message (optional)"
+          placeholder: "Add a message"
         submit: "Submit"
         succeded: "Sent. We'll be in touch shortly."
       citizen:

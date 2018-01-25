@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     let opts = {
       utilsScript: "/plugins/civically-landing-page/js/utils.js",
       preferredCountries: []
-    }
+    };
 
     if (value) opts['setNumber'] = value;
     $telInput.intlTelInput(opts);
@@ -22,10 +22,10 @@ export default Ember.Component.extend({
     const self = this;
     $telInput.blur(function() {
       reset();
-      let value = $.trim($telInput.val());
-      if (value) {
+      const number = $telInput.intlTelInput("getNumber");
+      if (number) {
         if ($telInput.intlTelInput("isValidNumber")) {
-          self.sendAction('phoneValidation', value);
+          self.sendAction('phoneValidation', true, number);
           $validMsg.removeClass("hide");
         } else {
           self.sendAction('phoneValidation', false);
@@ -33,10 +33,10 @@ export default Ember.Component.extend({
           $errorMsg.removeClass("hide");
         }
       } else {
-        self.sendAction('phoneValidation', false);
+        self.sendAction('phoneValidation', true);
       }
     });
 
     $telInput.on("keyup change", reset);
   }
-})
+});

@@ -263,6 +263,7 @@
 
   textarea.contact-message {
     width: 350px;
+    margin-top: 10px;
   }
 
   #contact-phone {
@@ -289,6 +290,15 @@
 
     label {
       font-size: 1em;
+
+      span {
+        margin-left: 2px;
+        color: $danger;
+      }
+    }
+
+    span {
+      margin: 5px 0;
     }
 
     .success {
@@ -297,6 +307,18 @@
 
     .fail {
       color: $danger;
+    }
+
+    &.email .fail {
+      margin: 5px 0;
+    }
+
+    &.phone {
+      margin-top: 5px;
+    }
+
+    &.institution {
+      margin-top: 5px;
     }
   }
 
@@ -324,4 +346,9 @@
 
 .scroll-to-map .p-text {
   cursor: pointer;
+}
+
+.intl-tel-input .country-list {
+  bottom: 100% !important;
+  margin-bottom: -1px !important;
 }

@@ -1,8 +1,9 @@
 en:
   contact_mailer:
     title: "New Contact"
-    subject_template: "New contact from %{name}"
+    subject_template: "New %{type} contact from %{name}"
     text_body_template: |
+      type: %{type}
       name: %{name}
       email: %{email}
       phone: %{phone}
@@ -12,3 +13,4 @@ en:
 
   site_settings:
     landing_contact_email: "Email to send landing page contacts to"
+    landing_contact_phone_enabled: "Add a phone input in the landing contact form"

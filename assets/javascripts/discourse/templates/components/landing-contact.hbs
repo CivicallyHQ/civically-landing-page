@@ -9,25 +9,27 @@
     <div class="p-text large">{{i18n 'landing.contact.title'}}</div>
   {{/if}}
   <div class="input">
-    <label for='contact-name'>{{i18n 'landing.contact.name.label'}}</label>
+    <label for='contact-name'>{{i18n 'landing.contact.name.label'}}<span>*</span></label>
     {{text-field value=name placeholderKey="landing.contact.name.placeholder" id="contact-name" autocorrect="off" autocapitalize="off"}}
   </div>
-  <div class="input">
-    <label for='contact-email'>{{i18n (concat 'landing.' type '.contact.email.label')}}</label>
+  <div class="input email">
+    <label for='contact-email'>{{i18n (concat 'landing.' type '.contact.email.label')}}<span>*</span></label>
     {{text-field value=email placeholderKey=(concat 'landing.' type '.contact.email.placeholder') id="contact-email" autocorrect="off" autocapitalize="off"}}
     <div class="fail">{{emailValidationError}}</div>
   </div>
-  <div class="input">
-    <label for='contact-phone'>{{i18n 'landing.contact.phone.label'}}</label>
-    {{phone-input id="contact-phone" phoneValidation="phoneValidation"}}
-  </div>
+  {{#if siteSettings.landing_contact_phone_enabled}}
+    <div class="input phone">
+      <label for='contact-phone'>{{i18n 'landing.contact.phone.label'}}</label>
+      {{phone-input id="contact-phone" phoneValidation="phoneValidation"}}
+    </div>
+  {{/if}}
   {{#if forInstitution}}
-    <div class="input">
-      <label for='contact-institution'>{{i18n (concat 'landing.' type '.contact.name.label')}}</label>
+    <div class="input institution">
+      <label for='contact-institution'>{{i18n (concat 'landing.' type '.contact.name.label')}}<span>*</span></label>
       {{text-field value=institution placeholderKey=(concat 'landing.' type '.contact.name.placeholder') id="contact-institution" autocorrect="off" autocapitalize="off"}}
     </div>
     <div class="input">
-      <label for='contact-position'>{{i18n (concat 'landing.' type '.contact.position.label')}}</label>
+      <label for='contact-position'>{{i18n (concat 'landing.' type '.contact.position.label')}}<span>*</span></label>
       {{text-field value=position placeholderKey=(concat 'landing.' type '.contact.position.placeholder') id="contact-position" autocorrect="off" autocapitalize="off"}}
     </div>
   {{/if}}

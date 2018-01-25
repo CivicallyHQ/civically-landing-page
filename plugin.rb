@@ -41,7 +41,7 @@ after_initialize do
 
   class CivicallyLanding::ContactController < ::ApplicationController
     def send_contact_email
-      params.permit(:name, :email, :phone, :institution, :position, :message)
+      params.permit(:type, :name, :email, :phone, :institution, :position, :message)
       contact = {}
 
       params.each do |key, value|
@@ -54,7 +54,7 @@ after_initialize do
         Jobs::ContactEmail.new.execute(to_address: SiteSetting.landing_contact_email, contact: contact)
         render json: success_json
       rescue => e
-        render json: {error: e}, status: 422
+        render json: { error: e }, status: 422
       end
     end
   end

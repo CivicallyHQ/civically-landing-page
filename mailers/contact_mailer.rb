@@ -7,6 +7,7 @@ class ContactMailer < ActionMailer::Base
     build_email(
       to_address,
       template: 'contact_mailer',
+      type: contact['type'],
       name: contact['name'],
       email: contact['email'],
       phone: contact['phone'],

@@ -1,3 +1,6 @@
 plugins:
+  landing_contact_phone_enabled:
+    default: false
+    client: true
   landing_contact_email:
     default: 'contact@civically.io'
