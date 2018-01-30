@@ -15,22 +15,21 @@ export default Discourse.Route.extend({
   },
 
   setupController(controller, model) {
-    const placeLocations = model.places.filter((c) => c.place && c.place_can_join)
-                                       .map((t) => t.location);
-    const petitionLocations = model.petitions.topics.reduce((locations, t) => {
-      if (t.location) locations.push(t.location);
-      return locations;
-    }, []);
-    const locations = placeLocations.concat(petitionLocations);
-    controller.set('locations', locations);
-
     const templateName = this.get('templateName');
-
     controller.set('contentClass', templateName);
 
     this.controllerFor('application').set('hideHeaderSearch', true);
 
     if (templateName === 'start') {
+      const placeLocations = model.places.filter((c) => c.place && c.place_can_join)
+                                         .map((t) => t.location);
+      const petitionLocations = model.petitions.topics.reduce((locations, t) => {
+        if (t.location) locations.push(t.location);
+        return locations;
+      }, []);
+      const locations = placeLocations.concat(petitionLocations);
+
+      this.controllerFor('start').set('locations', locations);
       this.controllerFor('application').set('canSignUp', false);
     }
 
