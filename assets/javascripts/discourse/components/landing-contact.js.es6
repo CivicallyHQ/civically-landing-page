@@ -1,10 +1,9 @@
 import { default as computed, on } from 'ember-addons/ember-computed-decorators';
-import ModalFunctionality from 'discourse/mixins/modal-functionality';
 import InputValidation from 'discourse/models/input-validation';
 import { sendContact } from '../lib/landing-utilities';
 import { emailValid } from 'discourse/lib/utilities';
 
-export default Ember.Component.extend(ModalFunctionality, {
+export default Ember.Component.extend({
   formSubmitted: false,
   classNames: ['landing-contact'],
   type: 'citizen',

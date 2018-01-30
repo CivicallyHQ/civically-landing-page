@@ -24,6 +24,7 @@ en:
           placeholder: "Add a message"
         submit: "Submit"
         succeded: "Sent. We'll be in touch shortly."
+
       citizen:
         link: "Citizens"
         title: "Civically is For You"
@@ -31,40 +32,6 @@ en:
           email:
             label: "Email"
             placeholder: "Your email"
-        problem:
-          1:
-            title: "Dealing with government is hard"
-            desc: "When you have to deal with your government it's hard to know where to start.
-                   You can spend weeks trying to sort out paperwork or work with bureaucrats."
-            image_url: "/plugins/civically-landing-page/images/government_frustrated.png"
-          2:
-            title: "The law is unfair"
-            desc: "Lawyers are expensive, laws are hard to understand and the legal system is intimidating. It can seem
-                  like law is just a way for rich people to find loopholes."
-            image_url: "/plugins/civically-landing-page/images/law_unfair.png"
-          3:
-            title: "Social networks aren't communities"
-            desc: "Social networks are fun, but they can leave us unfulfilled. They're about image, and endless feeds of
-                  posts competing for our attention."
-            image_url: '/plugins/civically-landing-page/images/social_machine.png'
-        solution:
-          title: "Civically is different"
-          1:
-            title: "Take control"
-            desc: "Navigate bureaucracy, get help with a legal issue or find out what plans are being
-                   made for your neighborhood. Be on top things, rather than reacting to events."
-            image: "/plugins/civically-landing-page/images/smooth_sailing.png"
-          2:
-            title: "Really connect"
-            desc: "Help your neighbors, go to community events, or discuss civic issues.
-                   Make deeper connections."
-            image: "/plugins/civically-landing-page/images/happy_group.png"
-          3:
-            title: "Made for your benefit"
-            desc: "Civically is not designed to make its <a href='/owners'>owners</a> wealthy.
-                   We're doing this because we believe the internet can be used for
-                   building social cohesion, furthering social justice and improving people's lives.."
-            image: "/plugins/civically-landing-page/images/benefit_tree.png"
 
       organization:
         link: "Organizations"

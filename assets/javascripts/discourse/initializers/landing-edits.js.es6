@@ -21,12 +21,6 @@ export default {
             const returnPath = encodeURIComponent(window.location.pathname);
             window.location = Discourse.getURL('/session/sso?return_path=' + returnPath);
           } else {
-            const $embeddedForm = $('.create-account-embed');
-            if ($embeddedForm.length) {
-              return $('html, body').animate({
-                scrollTop: $embeddedForm.offset().top - 150
-              }, 500);
-            }
             this._autoLogin('createAccount', 'create-account');
           }
         }

@@ -6,7 +6,6 @@ export default {
 
   initialize(registry, app) {
     app.LandingStartRoute = LandingRoute.extend();
-    app.LandingCitizensRoute = LandingRoute.extend();
     app.LandingGovernmentsRoute = LandingRoute.extend();
     app.LandingOrganizationsRoute = LandingRoute.extend();
   }

@@ -1,12 +1,12 @@
-{{#d-modal-body title='landing.contact.title'}}
-  {{#if inModal}}
+{{#embedded-modal-body title='landing.contact.title' embedded=embedded}}
+  {{#if embedded}}
+    <div class="p-text large">{{i18n 'landing.contact.title'}}</div>
+  {{else}}
     <div class='type-buttons'>
       {{#each typeButtons as |t|}}
         {{d-button class=t.class action='setType' actionParam=t.name label=t.label}}
       {{/each}}
     </div>
-  {{else}}
-    <div class="p-text large">{{i18n 'landing.contact.title'}}</div>
   {{/if}}
   <div class="input">
     <label for='contact-name'>{{i18n 'landing.contact.name.label'}}<span>*</span></label>
@@ -34,7 +34,7 @@
     </div>
   {{/if}}
   {{textarea value=message class="contact-message" placeholder=(i18n 'landing.contact.message.placeholder')}}
-{{/d-modal-body}}
+{{/embedded-modal-body}}
 <div class="modal-footer">
   {{d-button class='btn btn-large btn-primary' disabled=submitDisabled action="submitContact" label='landing.contact.submit'}}
   {{conditional-loading-spinner condition=submitting size="small"}}
