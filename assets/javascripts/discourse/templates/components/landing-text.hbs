@@ -1,8 +1,11 @@
 {{#if icon}}
   <i class="fa fa-{{icon}}" aria-hidden="true"></i>
 {{/if}}
+{{#if emoji}}
+  {{replace-emoji emoji}}
+{{/if}}
 {{#if url}}
-  <a href="{{url}}">{{{i18n content}}}</a>
+  <a href="{{url}}" target='_blank'>{{{i18n content}}}</a>
 {{else}}
-  {{{i18n content}}}
+  <span>{{{i18n content}}}</span>
 {{/if}}

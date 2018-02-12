@@ -60,6 +60,36 @@
         margin-bottom: 70px;
       }
     }
+
+    .links {
+      display: flex;
+      justify-content: space-evenly;
+
+      .p-text * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &.sentences {
+        margin-top: 25px;
+      }
+
+      a, span {
+        color: $primary;
+        font-size: 1.3em;
+      }
+
+      img.emoji, {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+      }
+
+      i {
+        font-size: 2em;
+        margin-right: 5px;
+      }
+    }
   }
 
   .image-container {
@@ -136,10 +166,16 @@
     line-height: 25px;
   }
 
+  .footer-left img {
+    margin-right: 20px;
+  }
+
   .footer-links {
     border-left: 2px solid $tertiary;
     padding: 0 25px;
     list-style: none;
+    overflow: hidden;
+    margin: 0;
   }
 
   .footer-disclaimer {

@@ -13,10 +13,21 @@
   </div>
 </div>
 
-<div class="centered">
+<div class="links">
+  {{landing-text content='landing.links.open_source' icon='github' url='https://github.com/civicallyhq'}}
+  {{landing-text content='landing.links.open_planned' emoji=':woman_technologist:t2:' url='https://civically.io/c/plans'}}
+  {{landing-text content='landing.links.collaborative' emoji=':flags:' url='https://civically.io/c/help'}}
+  {{landing-text content='landing.links.translated' emoji=':earth_africa:' url='https://civically.io/c/plans'}}
+</div>
+
+<div class="links sentences">
+  {{landing-text content='landing.links.app_store' emoji=':bulb:' url='https://civically.io/t/apps-and-app-store'}}
   <div class="scroll-to-map" {{action 'scrollToMap'}}>
-    {{landing-text content="landing.map_tagline" classes="large centered tagline"}}
+    {{landing-text content="landing.links.map" emoji=":world_map:"}}
   </div>
+</div>
+
+<div class="centered">
   {{map-component locations=locations zoom='2' center=mapCenter}}
 </div>
 
