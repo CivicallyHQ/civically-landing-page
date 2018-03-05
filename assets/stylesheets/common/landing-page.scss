@@ -30,6 +30,7 @@
 
     .sign-up {
       display: inline-block;
+      background-color: $secondary;
 
       .p-text {
         width: 100%;
@@ -44,16 +45,13 @@
       display: flex;
     }
 
-    .tagline {
-      font-size: 1.6em;
-    }
-
     .main {
       margin-bottom: 70px;
       margin-right: 50px;
+      flex: 1;
 
       .large {
-        margin-bottom: 60px;
+        margin-bottom: 40px;
       }
 
       .animated-link {
@@ -63,32 +61,81 @@
 
     .links {
       display: flex;
-      justify-content: space-evenly;
+      flex-direction: column;
+      background-color: $secondary;
 
-      .p-text * {
-        display: inline-block;
-        vertical-align: middle;
-      }
+      .p-text {
+        margin: 30px 0;
 
-      &.sentences {
-        margin-top: 25px;
+        > * {
+          display: inline-block;
+          vertical-align: middle;
+        }
       }
 
       a, span {
         color: $primary;
-        font-size: 1.3em;
+      }
+    }
+
+    .locale-selection {
+      position: relative;
+      margin-top: 40px;
+
+      a {
+        margin-right: 6px;
+        font-size: 1.1em;
       }
 
-      img.emoji, {
-        width: 30px;
-        height: 30px;
-        margin-right: 5px;
-      }
+      .hidden-locales {
+        position: absolute;
+        width: 300px;
+        background-color: $secondary;
+        border: 1px solid $primary-low;
+        box-shadow: shadow('dropdown');
+        bottom: 35px;
+        padding: 5px 7px;
+        right: -5px;
 
-      i {
-        font-size: 2em;
-        margin-right: 5px;
+        ul {
+          list-style: none;
+          margin: 0;
+          columns: 2;
+          -webkit-columns: 2;
+          -moz-columns: 2;
+
+          li {
+            margin: 3px 0;
+          }
+        }
       }
+    }
+
+    img.emoji, {
+      width: 35px;
+      height: 35px;
+      margin-right: 5px;
+    }
+
+    .bottom {
+      position: relative;
+    }
+
+    .background-image {
+      position: absolute;
+      left: 0;
+      top: -200px;
+      z-index: -1;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .contact {
+      width: 100%;
     }
   }
 
@@ -103,9 +150,8 @@
 
   .map-component {
     display: inline-block;
-    width: 80vw;
-    height: 80vh;
-    max-width: 1000px;
+    width: 80%;
+    height: 70vh;
     max-height: 700px;
     margin-top: 50px;
     margin-bottom: 100px;
@@ -122,6 +168,10 @@
     &>.p-text {
       padding: 0 15px;
     }
+
+    .combo-box {
+      width: 242px;
+    }
   }
 
   .create-account tr {
@@ -132,10 +182,6 @@
 
       &.label {
         padding-top: 15px;
-
-        label {
-          width: 80px;
-        }
       }
 
       .tip {
@@ -158,12 +204,18 @@
   margin-top: 100px;
   background-color: dark-light-diff($primary, $secondary, 95%, -65%);
   border: 1px solid dark-light-diff($primary, $secondary, 90%, -65%);
-  padding: 30px;
   display: flex;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 
   .p-text.small {
     font-size: 14px;
     line-height: 25px;
+  }
+
+  .footer-left {
+    padding: 30px;
   }
 
   .footer-left img {
@@ -179,18 +231,19 @@
   }
 
   .footer-disclaimer {
-    padding-left: 60px;
+    padding: 30px;
     flex: 1;
 
     > div:first-of-type {
       margin-bottom: 7px;
+      border-bottom: 2px solid $tertiary;
     }
   }
 }
 
 .animated-link {
   a {
-    background-image: linear-gradient(180deg,transparent 80%,#0088cc 0);
+    background-image: linear-gradient(180deg, transparent 90%, $tertiary 0);
     background-size: 0 100%;
     background-repeat: no-repeat;
     text-decoration: none;
@@ -380,8 +433,13 @@
   }
 }
 
-.scroll-to-map .p-text {
+.scroll-to-map {
+  margin-top: 40px;
   cursor: pointer;
+
+  .p-text {
+    background-color: $secondary;
+  }
 }
 
 .intl-tel-input .country-list {

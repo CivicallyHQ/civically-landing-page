@@ -33,7 +33,10 @@
       {{text-field value=position placeholderKey=(concat 'landing.' type '.contact.position.placeholder') id="contact-position" autocorrect="off" autocapitalize="off"}}
     </div>
   {{/if}}
-  {{textarea value=message class="contact-message" placeholder=(i18n 'landing.contact.message.placeholder')}}
+  <div class="input message">
+    <label>{{i18n 'landing.contact.message.label'}}<span>*</span></label>
+    {{textarea value=message class="contact-message" placeholder=(i18n 'landing.contact.message.placeholder')}}
+  </div>
 {{/embedded-modal-body}}
 <div class="modal-footer">
   {{d-button class='btn btn-large btn-primary' disabled=submitDisabled action="submitContact" label='landing.contact.submit'}}

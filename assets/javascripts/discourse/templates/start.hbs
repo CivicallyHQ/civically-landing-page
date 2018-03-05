@@ -1,36 +1,34 @@
 <div class="top">
   <div class="main">
     {{landing-text content="landing.tagline" classes="large tagline"}}
-    {{#unless site.mobileView}}
-      <img src="/plugins/civically-landing-page/images/apart_from_community.png">
-    {{/unless}}
+    <div class="links">
+      {{landing-text classes='animated-link medium' content='landing.links.open' emoji='sunny' url='https://github.com/civicallyhq'}}
+      {{landing-text classes='animated-link medium' content='landing.links.contribute' emoji='woman_technologist:t2' url='https://civically.io/c/plans'}}
+      {{landing-text classes='animated-link medium' content='landing.links.technology' emoji='bulb' url='https://civically.io/t/apps-and-app-store'}}
+    </div>
+    {{locale-selection}}
   </div>
 
   <div class="sign-up">
     {{landing-text content='landing.sign_up' classes="large"}}
-    {{landing-text content="landing.sign_up_tagline" classes="small"}}
+    {{landing-text content="landing.sign_up_tagline" classes="medium"}}
     {{outlet 'create-account'}}
   </div>
 </div>
 
-<div class="links">
-  {{landing-text content='landing.links.open_source' icon='github' url='https://github.com/civicallyhq'}}
-  {{landing-text content='landing.links.open_planned' emoji=':woman_technologist:t2:' url='https://civically.io/c/plans'}}
-  {{landing-text content='landing.links.collaborative' emoji=':flags:' url='https://civically.io/c/help'}}
-  {{landing-text content='landing.links.translated' emoji=':earth_africa:' url='https://civically.io/c/plans'}}
+<div class="scroll-to-map centered" {{action 'scrollToMap'}}>
+  {{landing-text classes="medium centered" content="landing.links.map" emoji="world_map"}}
+  {{d-icon 'chevron-down'}}
 </div>
 
-<div class="links sentences">
-  {{landing-text content='landing.links.app_store' emoji=':bulb:' url='https://civically.io/t/apps-and-app-store'}}
-  <div class="scroll-to-map" {{action 'scrollToMap'}}>
-    {{landing-text content="landing.links.map" emoji=":world_map:"}}
-  </div>
-</div>
-
-<div class="centered">
+<div class="bottom centered">
   {{map-component locations=locations zoom='2' center=mapCenter}}
-</div>
 
-<div class="centered">
-  {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
+  <div class="contact">
+    {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
+  </div>
+
+  <div class="background-image">
+    <img src="/plugins/civically-landing-page/images/background.png">
+  </div>
 </div>

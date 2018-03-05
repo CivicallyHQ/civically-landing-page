@@ -2,10 +2,10 @@
   <i class="fa fa-{{icon}}" aria-hidden="true"></i>
 {{/if}}
 {{#if emoji}}
-  {{replace-emoji emoji}}
+  {{replace-emoji formattedEmoji}}
 {{/if}}
 {{#if url}}
-  <a href="{{url}}" target='_blank'>{{{i18n content}}}</a>
+  <a href="{{url}}" target='_blank'>{{text}}</a>
 {{else}}
-  <span>{{{i18n content}}}</span>
+  <span>{{text}}</span>
 {{/if}}

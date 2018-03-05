@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     return this.get('type') === 'government' || this.get('type') === 'organization';
   },
 
-  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'formSubmitted', 'type')
+  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'messageValidation', 'formSubmitted', 'type')
   submitDisabled() {
     if (this.get('formSubmitted')) return true;
     if (this.get('nameValidation.failed')) return true;
@@ -37,6 +37,8 @@ export default Ember.Component.extend({
       if (this.get('institutionValidation.failed')) return true;
       if (this.get('positionValidation.failed')) return true;
     }
+
+    if (this.get('messageValidation.failed')) return true;
 
     return false;
   },
@@ -82,6 +84,11 @@ export default Ember.Component.extend({
     return this.textValidation('position');
   },
 
+  @computed('message')
+  messageValidation() {
+    return this.textValidation('message');
+  },
+
   textValidation(property) {
     if (Ember.isEmpty(this.get(property))) {
       return InputValidation.create({failed: true});
@@ -123,14 +130,11 @@ export default Ember.Component.extend({
     submitContact() {
       if (this.get('submitDisabled')) return false;
 
-      let data = this.getProperties('type', 'name', 'email');
+      let data = this.getProperties('type', 'name', 'email', 'message');
 
       const phone = this.get('phone');
       const phoneEnabled = Discourse.SiteSettings.landing_contact_phone_enabled;
       if (phone && phoneEnabled) data['phone'] = phone;
-
-      const message = this.get('message');
-      if (message) data['message'] = message;
 
       if (this.get('forInstitution')) {
         data['institution'] = this.get('institution');

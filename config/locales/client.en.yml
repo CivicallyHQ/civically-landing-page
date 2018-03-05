@@ -2,19 +2,22 @@ en:
   js:
     landing:
       title: "Civically"
-      tagline: "Make government work, law easier and community stronger."
+      tagline: "Civically is where you get help, and help your community in return."
       links:
-        open_source: "Open source"
-        open_planned: "Open planned"
-        collaborative: "Run collaboratively"
-        translated: "In 20 languages"
-        map: "See if your town is on Civically"
-        app_store: "We're building the world's first civic app store"
+        open: "Open, transparent and friendly."
+        contribute: "You can make a real contribution."
+        technology: "The best civic technology, in one place."
+        map: "Help put your town on the map."
       sign_up: "Sign Up"
       sign_up_tagline: "It's free, secure and there are no ads."
       footer_legal_title: "Civil Core Pty Ltd. ACN 618 525 983. All rights reserved."
-      footer_legal_text: |
-        Civically is not a law firm or a substitute for a lawyer or law firm. Communications between you and Civically are protected by our <a href='/privacy'>Privacy Policy</a>, but not by lawyer-client privilege or as work product. We cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. Your access to our website is subject to our <a href='/terms' target='blank'>Terms of Service</a>.
+      footer_legal_text: >
+        Civically is not a law firm or a substitute for a lawyer or law firm.
+        Communications between you and Civically are protected by our [Privacy Policy](/privacy),
+        but not by lawyer-client privilege or as work product. We cannot provide any kind of advice,
+        explanation, opinion, or recommendation about possible legal rights, remedies, defenses,
+        options, selection of forms, or strategies. Your access to our website is subject to our
+        [Terms of Service](/terms).
       contact:
         title: "Contact Civically"
         failed: "Contact details failed to send. Please email contact@civically.io."
@@ -27,6 +30,7 @@ en:
           valid: "<i class='fa fa-check'></i> Valid number"
           invalid: "<i class='fa fa-times'></i> Invalid number"
         message:
+          label: "Message"
           placeholder: "Add a message"
         submit: "Submit"
         succeded: "Sent. We'll be in touch shortly."

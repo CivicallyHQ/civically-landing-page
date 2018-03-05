@@ -4,3 +4,6 @@ plugins:
     client: true
   landing_contact_email:
     default: 'contact@civically.io'
+  landing_visible_locales:
+    default: 'ar,zh_CN,en,es,fr,ru'
+    client: true
