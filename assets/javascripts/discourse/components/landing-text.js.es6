@@ -3,12 +3,14 @@ import { cookAsync } from 'discourse/lib/text';
 
 export default Ember.Component.extend({
   classNameBindings: [":p-text", "classes"],
+  guestLocale: null,
 
   @on('init')
   setup() {
     const markdown = this.get('markdown');
     const content = this.get('content');
     const text = I18n.t(content);
+
     if (markdown) {
       cookAsync(text).then((cooked) => {
         this.set('text', cooked);

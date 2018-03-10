@@ -16,7 +16,7 @@ export default Discourse.Route.extend({
 
   setupController(controller, model) {
     const templateName = this.get('templateName');
-    controller.set('contentClass', templateName);
+    this.controllerFor('landing').set('contentClass', templateName);
 
     this.controllerFor('application').set('hideHeaderSearch', true);
 
@@ -29,7 +29,7 @@ export default Discourse.Route.extend({
       }, []);
       const locations = placeLocations.concat(petitionLocations);
 
-      this.controllerFor('start').set('locations', locations);
+      controller.set('locations', locations);
       this.controllerFor('application').set('canSignUp', false);
     }
 

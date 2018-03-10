@@ -187,6 +187,8 @@
       .tip {
         margin-top: 4px;
         display: block;
+        max-width: 220px;
+        white-space: initial;
 
         i {
           height: 19px;
@@ -343,6 +345,10 @@
     overflow: initial;
     max-height: initial;
     padding: initial;
+  }
+
+  .input.message {
+    padding: 0;
   }
 
   input:not(#contact-phone), .contact-message {

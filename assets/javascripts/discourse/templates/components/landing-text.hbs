@@ -4,8 +4,12 @@
 {{#if emoji}}
   {{replace-emoji formattedEmoji}}
 {{/if}}
-{{#if url}}
-  <a href="{{url}}" target='_blank'>{{text}}</a>
+{{#if linkTo}}
+  {{#link-to linkTo}}{{text}}{{/link-to}}
 {{else}}
-  <span>{{text}}</span>
+  {{#if url}}
+    <a href="{{url}}" target='_blank'>{{text}}</a>
+  {{else}}
+    <span>{{text}}</span>
+  {{/if}}
 {{/if}}

@@ -2,11 +2,11 @@ en:
   js:
     landing:
       title: "Civically"
-      tagline: "Civically is where you get help, and help your community in return."
+      tagline: "Civically is where people help each other solve civic problems."
       links:
         open: "Open, transparent and friendly."
-        contribute: "You can make a real contribution."
-        technology: "The best civic technology, in one place."
+        contribute: "Make a real contribution to your community."
+        technology: "Get the best civic technology."
         map: "Help put your town on the map."
       sign_up: "Sign Up"
       sign_up_tagline: "It's free, secure and there are no ads."
