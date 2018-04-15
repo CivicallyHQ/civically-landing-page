@@ -2,9 +2,9 @@
   <div class="main">
     {{landing-text content="landing.tagline" classes="large tagline"}}
     <div class="links">
-      {{landing-text classes='medium' content='landing.links.open' emoji='sunny'}}
-      {{landing-text classes='medium' content='landing.links.contribute' emoji='woman_technologist:t2'}}
-      {{landing-text classes='medium' content='landing.links.technology' emoji='bulb'}}
+      {{landing-text classes='medium' content='landing.links.solve' emoji='bulb'}}
+      {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
+      {{landing-text classes='medium' content='landing.links.contribute' emoji='park'}}
     </div>
     {{locale-selection}}
   </div>
@@ -23,12 +23,8 @@
 
 <div class="bottom centered">
   {{map-component locations=locations zoom='2' center=mapCenter}}
+</div>
 
-  <div class="contact">
-    {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
-  </div>
-
-  <div class="background-image">
-    <img src="/plugins/civically-landing-page/images/background.png">
-  </div>
+<div class="contact">
+  {{d-button action='contact' label='landing.contact.title' class='btn-primary btn-large'}}
 </div>

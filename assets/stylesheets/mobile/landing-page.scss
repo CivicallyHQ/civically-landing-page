@@ -16,11 +16,19 @@
       max-height: initial;
     }
 
+    table {
+      width: 100%;
+    }
+
     tr td {
       width: 100%;
       display: block;
-      box-sizing: border-box;
       clear: both;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .modal-footer .btn {
@@ -31,6 +39,7 @@
   .main {
     padding: 40px 20px;
     margin-bottom: 0;
+    margin-right: 0;
 
     .large {
       margin: 0;
@@ -43,8 +52,8 @@
     margin-top: 20px;
 
     .p-text {
-      margin: 20px 0;
-      font-size: 1em;
+      margin: 15px 0;
+      font-size: 1.2em;
       width: 100%;
 
       img, i {
@@ -73,7 +82,14 @@
     width: 90vw;
     height: 80vh;
     margin-top: 10px;
-    margin-bottom: 60px;
+  }
+
+  .locale-selection {
+    margin-top: 10px;
+  }
+
+  .contact {
+    left: 20px;
   }
 }
 
@@ -81,6 +97,10 @@
   margin-top: 60px;
   padding: 20px;
   flex-wrap: wrap;
+
+  .footer-left {
+    padding: 20px;
+  }
 
   .footer-disclaimer {
     padding-left: 0;

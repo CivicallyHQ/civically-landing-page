@@ -4,7 +4,7 @@ import computed from 'ember-addons/ember-computed-decorators';
 export default Discourse.Route.extend({
   model() {
     return Ember.RSVP.hash({
-      places: this.site.get('categories'),
+      categories: this.site.get('categories'),
       petitions: this.store.findFiltered('topicList', { filter: 'c/petitions/place' })
     });
   },
@@ -21,8 +21,7 @@ export default Discourse.Route.extend({
     this.controllerFor('application').set('hideHeaderSearch', true);
 
     if (templateName === 'start') {
-      const placeLocations = model.places.filter((c) => c.place && c.place_can_join)
-                                         .map((t) => t.location);
+      const placeLocations = model.categories.filter((c) => c.is_place && c.can_join).map((t) => t.location);
       const petitionLocations = model.petitions.topics.reduce((locations, t) => {
         if (t.location) locations.push(t.location);
         return locations;
