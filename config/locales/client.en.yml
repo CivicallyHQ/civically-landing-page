@@ -2,12 +2,12 @@ en:
   js:
     landing:
       title: "Civically"
-      tagline: "Civically is an open platform for government, law and community."
+      tagline: "The platform for government, law and community."
       links:
-        solve: "Get practical advice about your civic problems."
-        technology: "Get the best civic technology for your town or city."
-        contribute: "Help build public space on the internet."
-        map: "Help put your town on the map."
+        solve: "Get practical advice."
+        technology: "Get the best civic technology."
+        contribute: "Help build public space online."
+        map: "Help put your town on our map."
       sign_up: "Sign Up"
       sign_up_tagline: "It's free, secure and there are no ads."
       footer_legal_title: "Civil Core Pty Ltd. ACN 618 525 983. All rights reserved."

@@ -1,15 +1,11 @@
-import { observes } from 'ember-addons/ember-computed-decorators';
+import { observes, on } from 'ember-addons/ember-computed-decorators';
 
 export default Ember.Controller.extend({
   application: Ember.inject.controller(),
 
-  init() {
-    this._super();
-    this.positionContact();
-  },
-
+  @on('init')
   @observes('application.currentPath')
-  positionContact() {
+  setup() {
     if (!this.site.mobileView) {
       Ember.run.scheduleOnce('afterRender', () => {
         const $contact = $('.landing-page .contact');
@@ -17,6 +13,10 @@ export default Ember.Controller.extend({
         $contact.css('left', offset);
       });
     }
+
+    const path = this.get('application.currentPath');
+
+    $('body').toggleClass('landing', path.indexOf('landing') > -1);
   },
 
   actions: {
