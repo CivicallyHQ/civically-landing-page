@@ -1,5 +1,6 @@
 import { withPluginApi } from 'discourse/lib/plugin-api';
 import { observes, default as computed } from 'ember-addons/ember-computed-decorators';
+import showModal from 'discourse/lib/show-modal';
 
 export default {
   name: 'landing-edits',
@@ -36,6 +37,20 @@ export default {
         hideHeaderChanged() {
           this.toggleVisibility();
         }
+      });
+
+      api.decorateWidget('home-logo:after', (helper) => {
+        if (helper.attrs.route.indexOf('landing') > -1) {
+          return helper.attach('button', {
+            action: 'openContact',
+            label: 'landing.contact.title',
+            className: 'contact btn-primary'
+          });
+        }
+      });
+
+      api.attachWidgetAction('home-logo', 'openContact', () => {
+        showModal('landing-contact-modal');
       });
     });
   }

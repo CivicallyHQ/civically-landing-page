@@ -2,12 +2,12 @@ en:
   js:
     landing:
       title: "Civically"
-      tagline: "The platform for government, law and community."
+      tagline: "The people's platform."
       links:
-        solve: "Get practical advice from people just like you."
-        technology: "Be part of your community."
+        solve: "Get practical advice on government and legal issues."
+        technology: "Be part of your local community."
         contribute: "Help build public space online."
-        map: "Help put your city, town or village on our map."
+        map: "Help put your city or town on the map."
       sign_up: "Sign Up"
       sign_up_tagline: "It's free, secure and there are no ads."
       footer_legal_title: "Civil Core Pty Ltd. ACN 618 525 983. All rights reserved."
@@ -46,7 +46,7 @@ en:
       organization:
         link: "Organizations"
         title: "Civically for Civic Organizations"
-        tagline: Launching in 2019
+        subtitle: Launching in 2019
         contact:
           email:
             label: "Email"
@@ -125,7 +125,7 @@ en:
       government:
         link: "Governments"
         title: "Civically for Governments"
-        tagline: Launching in 2019
+        subtitle: Launching in 2019
         contact:
           email:
             label: "Email"

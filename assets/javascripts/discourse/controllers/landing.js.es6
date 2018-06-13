@@ -6,17 +6,9 @@ export default Ember.Controller.extend({
   @on('init')
   @observes('application.currentPath')
   setup() {
-    if (!this.site.mobileView) {
-      Ember.run.scheduleOnce('afterRender', () => {
-        const $contact = $('.landing-page .contact');
-        const offset = $('#main-outlet').offset().left;
-        $contact.css('left', offset);
-      });
-    }
-
     const path = this.get('application.currentPath');
 
-    $('body').toggleClass('landing', path.indexOf('landing') > -1);
+    $('body').toggleClass('landing', path && path.indexOf('landing') > -1);
   },
 
   actions: {

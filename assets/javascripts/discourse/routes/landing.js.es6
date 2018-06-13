@@ -1,12 +1,8 @@
-import showModal from 'discourse/lib/show-modal';
 import computed from 'ember-addons/ember-computed-decorators';
 
 export default Discourse.Route.extend({
   model() {
-    return Ember.RSVP.hash({
-      categories: this.site.get('categories'),
-      petitions: this.store.findFiltered('topicList', { filter: 'c/petitions/place' })
-    });
+    this.site.get('categories').filter((c) => c.is_place && c.can_join).map((t) => t.location);
   },
 
   @computed()
@@ -17,18 +13,10 @@ export default Discourse.Route.extend({
   setupController(controller, model) {
     const templateName = this.get('templateName');
     this.controllerFor('landing').set('contentClass', templateName);
-
     this.controllerFor('application').set('hideHeaderSearch', true);
 
     if (templateName === 'start') {
-      const placeLocations = model.categories.filter((c) => c.is_place && c.can_join).map((t) => t.location);
-      const petitionLocations = model.petitions.topics.reduce((locations, t) => {
-        if (t.location) locations.push(t.location);
-        return locations;
-      }, []);
-      const locations = placeLocations.concat(petitionLocations);
-
-      controller.set('locations', locations);
+      controller.set('locations', model);
       this.controllerFor('application').set('canSignUp', false);
     }
 
@@ -36,14 +24,6 @@ export default Discourse.Route.extend({
     // otherwise there is an element id conflict with login modal
     if (templateName === 'start' || templateName === 'citizens') {
       this.controllerFor('create-account').set('hasAuthOptions', true);
-    }
-  },
-
-  actions: {
-    contact(type) {
-      showModal('landing-contact-modal', {
-        model: { type }
-      });
     }
   },
 

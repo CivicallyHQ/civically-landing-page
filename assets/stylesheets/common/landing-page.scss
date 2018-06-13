@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
+.d-header .contact {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
 .landing-page {
   font-family: 'Montserrat', sans-serif;
   padding-top: 80px;
+
+  .title-area {
+    margin-bottom: 60px;
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
 
   .p-text {
     letter-spacing: 1.2px;
@@ -40,6 +54,10 @@
 
   &.start {
     padding-top: 40px;
+
+    .title {
+      margin-bottom: 20px;
+    }
 
     .top {
       display: flex;
@@ -133,17 +151,6 @@
         width: 100%;
       }
     }
-
-    .contact {
-      position: fixed;
-      z-index: 998;
-      bottom: 20px;
-      left: 20px;
-
-      .btn {
-        box-shadow: shadow("dropdown");
-      }
-    }
   }
 
   .image-container {
@@ -183,32 +190,43 @@
   .create-account tr {
     white-space: nowrap;
 
+    .tip {
+      display: none;
+      white-space: initial;
+
+      &:not(:empty) {
+        display: block;
+      }
+
+      i {
+        height: 19px;
+      }
+    }
+
     td {
       vertical-align: top;
 
       &.label {
         padding-top: 15px;
       }
-
-      .tip {
-        margin-top: 4px;
-        display: block;
-        white-space: initial;
-
-        i {
-          height: 19px;
-        }
-      }
     }
 
-    &.instructions label {
+    &.instructions label, .tip {
+      margin-top: 2px;
       font-size: 1.2em;
       line-height: 1.6;
+      min-height: 1.75em;
     }
   }
 
   .create-account .password-confirmation {
     display: none;
+  }
+}
+
+.solutions {
+  .title {
+    margin-bottom: 100px;
   }
 }
 
