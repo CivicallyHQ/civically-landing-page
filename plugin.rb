@@ -23,7 +23,6 @@ after_initialize do
   Discourse::Application.routes.append do
     mount ::CivicallyLanding::Engine, at: "landing"
     get "start" => "civically_landing/static#index"
-    get "citizens" => "civically_landing/static#index"
     get "organizations" => "civically_landing/static#index"
     get "governments" => "civically_landing/static#index"
     get "add-location" => "civically_landing/static#index"

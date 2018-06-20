@@ -35,9 +35,8 @@ en:
         submit: "Submit"
         succeded: "Sent. We'll be in touch shortly."
 
-      citizen:
-        link: "Citizens"
-        title: "Civically is For You"
+      individual:
+        link: "Individuals"
         contact:
           email:
             label: "Email"
@@ -190,17 +189,6 @@ en:
             diagram_2:
               title: "Online engagement on Civically"
               url: "/plugins/civically-landing-page/images/civically-engagement.png"
-      trial:
-        title: "Bring Civically to Your place"
-        citizen:
-          title: "As a Citizen"
-          text: ""
-        government:
-          title: "As a Government"
-          text: ""
-        organization:
-          title: "As an Organization"
-          text: ""
       faq:
         overlap: "If you believe your place should be split into two or more communties, or combined with another place,
                   you can post a vote on the matter in your place."

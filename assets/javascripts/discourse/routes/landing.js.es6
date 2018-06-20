@@ -22,7 +22,7 @@ export default Discourse.Route.extend({
 
     // so the login-buttons element isn't added,
     // otherwise there is an element id conflict with login modal
-    if (templateName === 'start' || templateName === 'citizens') {
+    if (templateName === 'start') {
       this.controllerFor('create-account').set('hasAuthOptions', true);
     }
   },
@@ -34,7 +34,7 @@ export default Discourse.Route.extend({
       into: 'landing',
       outlet: 'content'
     });
-    if (templateName === 'start' || templateName === 'citizens') {
+    if (templateName === 'start') {
       this.render('modal/create-account', {
         into: templateName,
         outlet: 'create-account',

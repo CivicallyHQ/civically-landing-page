@@ -6,7 +6,7 @@ import { emailValid } from 'discourse/lib/utilities';
 export default Ember.Component.extend({
   formSubmitted: false,
   classNames: ['landing-contact'],
-  type: 'citizen',
+  type: 'individual',
 
   @on('init')
   resetForm() {
@@ -99,7 +99,7 @@ export default Ember.Component.extend({
 
   @computed('type')
   typeButtons(type) {
-    const types = ['citizen', 'government', 'organization'];
+    const types = ['individual', 'government', 'organization'];
     const baseClass = '';
 
     let buttons = [];
