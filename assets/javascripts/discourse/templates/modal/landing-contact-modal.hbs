@@ -1,1 +1,5 @@
-{{landing-contact inModal=true}}
+{{#if model.type}}
+  {{landing-contact inModal=true type=model.type}}
+{{else}}
+  {{landing-contact inModal=true}}
+{{/if}}

@@ -9,6 +9,18 @@ export default Ember.Component.extend({
   type: 'individual',
 
   @on('init')
+  setupTypes() {
+    const defaultTypes = ['individual', 'government', 'organization'];
+    const type = this.get('type');
+
+    if (defaultTypes.indexOf(type) > -1) {
+      this.set('types', defaultTypes);
+    } else {
+      this.set('types', [type]);
+    }
+  },
+
+  @on('init')
   resetForm() {
     this.setProperties({
       name: '',
@@ -41,6 +53,24 @@ export default Ember.Component.extend({
     if (this.get('messageValidation.failed')) return true;
 
     return false;
+  },
+
+  @computed('type')
+  emailLabel(type) {
+    if (this.get('isInstitution')) {
+      return `landing.${type}.contact.email.label`;
+    } else {
+      return 'landing.contact.email.label';
+    }
+  },
+
+  @computed('type')
+  emailPlaceholder(type) {
+    if (this.get('isInstitution')) {
+      return `landing.${type}.contact.email.placeholder`;
+    } else {
+      return 'landing.contact.email.placeholder';
+    }
   },
 
   @computed('email')
@@ -97,9 +127,8 @@ export default Ember.Component.extend({
     return InputValidation.create({ok: true});
   },
 
-  @computed('type')
-  typeButtons(type) {
-    const types = ['individual', 'government', 'organization'];
+  @computed('type', 'types')
+  typeButtons(type, types) {
     const baseClass = '';
 
     let buttons = [];

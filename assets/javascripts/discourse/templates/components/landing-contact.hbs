@@ -13,8 +13,8 @@
     {{text-field value=name placeholderKey="landing.contact.name.placeholder" id="contact-name" autocorrect="off" autocapitalize="off"}}
   </div>
   <div class="input email">
-    <label for='contact-email'>{{i18n (concat 'landing.' type '.contact.email.label')}}<span>*</span></label>
-    {{text-field value=email placeholderKey=(concat 'landing.' type '.contact.email.placeholder') id="contact-email" autocorrect="off" autocapitalize="off"}}
+    <label for='contact-email'>{{i18n emailLabel}}<span>*</span></label>
+    {{text-field value=email placeholderKey=emailPlaceholder id="contact-email" autocorrect="off" autocapitalize="off"}}
     <div class="fail">{{emailValidationError}}</div>
   </div>
   {{#if siteSettings.landing_contact_phone_enabled}}
