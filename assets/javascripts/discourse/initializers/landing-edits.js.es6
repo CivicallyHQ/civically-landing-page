@@ -40,7 +40,7 @@ export default {
       });
 
       api.decorateWidget('home-logo:after', (helper) => {
-        if (helper.attrs.route.indexOf('landing') > -1) {
+        if (helper.attrs.route && helper.attrs.route.indexOf('landing') > -1) {
           return helper.attach('button', {
             action: 'openContact',
             label: 'landing.contact.title',

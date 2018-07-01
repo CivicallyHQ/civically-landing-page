@@ -16,10 +16,6 @@
       max-height: initial;
     }
 
-    table {
-      width: 100%;
-    }
-
     tr td {
       width: 100%;
       display: block;
@@ -33,6 +29,10 @@
 
     .modal-footer .btn {
       font-size: 1em;
+    }
+
+    .login-form .tip:not(:empty), .login-form .tip:empty+td {
+      width: 100%;
     }
   }
 

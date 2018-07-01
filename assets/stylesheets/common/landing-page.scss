@@ -180,6 +180,7 @@
 
     &>.p-text {
       padding: 0 15px;
+      margin-bottom: 5px;
     }
 
     .combo-box {
@@ -187,40 +188,39 @@
     }
   }
 
-  .create-account tr {
-    white-space: nowrap;
+  .create-account {
+    .modal-body {
+      padding: 0 15px;
+    }
 
-    .tip {
+    .password-confirmation {
       display: none;
-      white-space: initial;
-
-      &:not(:empty) {
-        display: block;
-      }
-
-      i {
-        height: 19px;
-      }
     }
 
-    td {
-      vertical-align: top;
-
-      &.label {
-        padding-top: 15px;
-      }
+    tr.instructions {
+      height: 25px;
+      line-height: 25px;
     }
 
-    &.instructions label, .tip {
-      margin-top: 2px;
-      font-size: 1.2em;
-      line-height: 1.6;
-      min-height: 1.75em;
+    td.label {
+      padding-top: 10px;
     }
-  }
 
-  .create-account .password-confirmation {
-    display: none;
+    td:empty, div:empty {
+      display: none;
+    }
+
+    td input {
+      width: 300px;
+    }
+
+    tr.instructions td label {
+      font-size: 0.9em;
+    }
+
+    .login-form .tip:not(:empty), .login-form .tip:empty+td {
+      width: 300px;
+    }
   }
 }
 
