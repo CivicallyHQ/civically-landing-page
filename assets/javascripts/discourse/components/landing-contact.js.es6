@@ -3,6 +3,15 @@ import InputValidation from 'discourse/models/input-validation';
 import { sendContact } from '../lib/landing-utilities';
 import { emailValid } from 'discourse/lib/utilities';
 
+const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 'message'];
+
+const customTextKeys = {
+  individual: [],
+  organisation: ['email', 'institution', 'position'],
+  government: ['email', 'institution', 'position'],
+  launch: ['title', 'name', 'message']
+};
+
 export default Ember.Component.extend({
   formSubmitted: false,
   classNames: ['landing-contact'],
@@ -10,7 +19,7 @@ export default Ember.Component.extend({
 
   @on('init')
   setupTypes() {
-    const defaultTypes = ['individual', 'government', 'organization'];
+    const defaultTypes = ['individual', 'organization', 'government'];
     const type = this.get('type');
 
     if (defaultTypes.indexOf(type) > -1) {
@@ -33,10 +42,32 @@ export default Ember.Component.extend({
     });
   },
 
+  @on('init')
+  setText() {
+    const type = this.get('type');
+    const custom = customTextKeys[type];
+    let props = {};
+
+    textKeys.forEach((k) => {
+      let parentKey = custom.indexOf(k) > -1 ? `landing.${type}.contact` : 'landing.contact';
+
+      if (k === 'title') {
+        props['title'] = `${parentKey}.title`;
+      } else {
+        props[`${k}Label`] = `${parentKey}.${k}.label`;
+        props[`${k}Placeholder`] = `${parentKey}.${k}.placeholder`;
+      }
+    });
+
+    this.setProperties(props);
+  },
+
   @computed('type')
   forInstitution() {
     return this.get('type') === 'government' || this.get('type') === 'organization';
   },
+
+  forLaunch: Ember.computed.equal('type', 'launch'),
 
   @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'messageValidation', 'formSubmitted', 'type')
   submitDisabled() {
@@ -53,24 +84,6 @@ export default Ember.Component.extend({
     if (this.get('messageValidation.failed')) return true;
 
     return false;
-  },
-
-  @computed('type')
-  emailLabel(type) {
-    if (this.get('isInstitution')) {
-      return `landing.${type}.contact.email.label`;
-    } else {
-      return 'landing.contact.email.label';
-    }
-  },
-
-  @computed('type')
-  emailPlaceholder(type) {
-    if (this.get('isInstitution')) {
-      return `landing.${type}.contact.email.placeholder`;
-    } else {
-      return 'landing.contact.email.placeholder';
-    }
   },
 
   @computed('email')

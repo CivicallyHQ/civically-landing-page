@@ -1,26 +1,45 @@
-<div class="top">
+{{#if siteSettings.invite_only}}
+  {{landing-text content="landing.launch.info" classes="small alert alert-info"}}
+{{/if}}
+<div class="{{topClasses}}">
   <div class="main">
-    {{landing-text content="landing.tagline" classes="title"}}
-    <div class="links">
-      {{landing-text classes='medium' content='landing.links.solve' emoji='man_pilot:t5'}}
-      {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
-      {{landing-text classes='medium' content='landing.links.contribute' emoji='park'}}
+    {{#if siteSettings.invite_only}}
+      {{landing-text content="landing.launch.title" classes="title"}}
+    {{else}}
+      {{landing-text content="landing.tagline" classes="title"}}
+    {{/if}}
+
+    <div class="left">
+      {{#if siteSettings.invite_only}}
+        {{landing-text content="landing.launch.description" classes="small" markdown=true}}
+      {{else}}
+        {{landing-text classes='medium' content='landing.links.solve' emoji='man_pilot:t5'}}
+        {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
+        {{landing-text classes='medium' content='landing.links.contribute' emoji='park'}}
+      {{/if}}
     </div>
+
     {{locale-selection}}
   </div>
-
-  <div class="sign-up">
-    {{landing-text content='landing.sign_up' classes="large"}}
-    {{landing-text content="landing.sign_up_tagline" classes="small"}}
-    {{outlet 'create-account'}}
+  <div class="right">
+    {{#if siteSettings.invite_only}}
+      {{landing-contact type='launch' embedded=true}}
+      {{static-image name='people/35'}}
+    {{else}}
+      {{landing-text content='landing.sign_up' classes="large"}}
+      {{landing-text content="landing.sign_up_tagline" classes="small"}}
+      {{outlet 'create-account'}}
+    {{/if}}
   </div>
 </div>
 
-<div class="scroll-to-map centered" {{action 'scrollToMap'}}>
-  {{landing-text classes="medium centered" content="landing.links.map" emoji="world_map"}}
-  {{d-icon 'chevron-down'}}
-</div>
+{{#unless siteSettings.invite_only}}
+  <div class="scroll-to-map centered" {{action 'scrollToMap'}}>
+    {{landing-text classes="medium centered" content="landing.links.map" emoji="world_map"}}
+    {{d-icon 'chevron-down'}}
+  </div>
 
-<div class="bottom centered">
-  {{map-component locations=locations zoom='2' center=mapCenter}}
-</div>
+  <div class="bottom centered">
+    {{map-component locations=locations zoom='2' center=mapCenter}}
+  </div>
+{{/unless}}

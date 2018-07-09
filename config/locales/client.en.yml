@@ -30,9 +30,15 @@ en:
           placeholder: "Your email"
         phone:
           label: "Phone"
-          placeholder: "Your work phone number"
+          placeholder: "Your phone number"
           valid: "<i class='fa fa-check'></i> Valid number"
           invalid: "<i class='fa fa-times'></i> Invalid number"
+        institution:
+          label: "Institution"
+          placeholder: "Where you work"
+        position:
+          label: "Position"
+          placeholder: "Your title"
         message:
           label: "Message"
           placeholder: "Add a message"
@@ -42,11 +48,43 @@ en:
       donate:
         link: "Contact Us About A Donation"
 
+      launch:
+        info: >
+          Civically is a community platform for law and government, launching soon.
+          We're currently collecting stories.
+
+        title: "Your story can help others"
+        description: |
+          Civically is a place for people to share their **experiences with law and government**.
+
+          <div class="highlight">
+          We’re looking for stories about
+
+          - a recent **legal or government issue**
+
+          - from people who want help, or
+
+          - people who want to help their community.
+          </div>
+
+          We have a strict minimum age of 13 years.
+
+          When Civically launches, others will be able to respond to your story. Civically is carefully built to encourage healthy and respectful discussion.
+
+        contact:
+          title: "Tell us your story"
+          name:
+            label: "Name or nickname"
+            placeholder: "What you'd like to be called"
+          message:
+            label: "Story"
+            placeholder: "Tell us what happened and who you dealt with."
+
       team:
         link: "Contact Us About Our Team"
 
       individual:
-        link: "Individuals"
+        link: "Individual"
 
       organization:
         link: "Organizations"
@@ -54,14 +92,12 @@ en:
         subtitle: Launching in 2019
         contact:
           email:
-            label: "Email"
             placeholder: "Your work email"
-          name:
+          phone:
+            placeholder: "Your work phone number"
+          institution:
             label: "Organization"
             placeholder: "Organization you work at"
-          position:
-            label: "Position"
-            placeholder: "Your title"
         problem:
           1:
             title: "Staying afloat is a battle"
@@ -133,14 +169,12 @@ en:
         subtitle: Launching in 2020
         contact:
           email:
-            label: "Email"
             placeholder: "Your work email"
-          name:
+          phone:
+            placeholder: "Your work phone number"
+          institution:
             label: "Government"
             placeholder: "Government you work at"
-          position:
-            label: "Position"
-            placeholder: "Your title"
         problem:
           1:
             title: "Providing public services is hard"

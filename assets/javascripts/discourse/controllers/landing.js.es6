@@ -1,4 +1,4 @@
-import { observes, on } from 'ember-addons/ember-computed-decorators';
+import { default as computed, observes, on } from 'ember-addons/ember-computed-decorators';
 
 export default Ember.Controller.extend({
   application: Ember.inject.controller(),
@@ -9,6 +9,15 @@ export default Ember.Controller.extend({
     const path = this.get('application.currentPath');
 
     $('body').toggleClass('landing', path && path.indexOf('landing') > -1);
+  },
+
+  @computed
+  topClasses() {
+    let classes = 'top';
+    if (Discourse.SiteSettings.invite_only) {
+      classes += ' invite-only';
+    }
+    return classes;
   },
 
   actions: {

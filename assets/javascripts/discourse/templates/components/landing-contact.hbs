@@ -1,6 +1,6 @@
-{{#embedded-modal-body title='landing.contact.title' embedded=embedded}}
+{{#embedded-modal-body title=title embedded=embedded}}
   {{#if embedded}}
-    <div class="p-text large">{{i18n 'landing.contact.title'}}</div>
+    <div class="p-text large">{{i18n title}}</div>
   {{else}}
     <div class='type-buttons'>
       {{#each typeButtons as |t|}}
@@ -9,37 +9,56 @@
     </div>
   {{/if}}
   <div class="input">
-    <label for='contact-name'>{{i18n 'landing.contact.name.label'}}<span>*</span></label>
-    {{text-field value=name placeholderKey="landing.contact.name.placeholder" id="contact-name" autocorrect="off" autocapitalize="off"}}
+    <label for='contact-name'>{{i18n nameLabel}}<span>*</span></label>
+    {{text-field value=name
+                 placeholderKey=namePlaceholder
+                 autocorrect="off"
+                 autocapitalize="off"}}
   </div>
   <div class="input email">
     <label for='contact-email'>{{i18n emailLabel}}<span>*</span></label>
-    {{text-field value=email placeholderKey=emailPlaceholder id="contact-email" autocorrect="off" autocapitalize="off"}}
+    {{text-field value=email
+                 placeholderKey=emailPlaceholder
+                 autocorrect="off"
+                 autocapitalize="off"}}
     <div class="fail">{{emailValidationError}}</div>
   </div>
   {{#if siteSettings.landing_contact_phone_enabled}}
     <div class="input phone">
-      <label for='contact-phone'>{{i18n 'landing.contact.phone.label'}}</label>
-      {{phone-input id="contact-phone" phoneValidation="phoneValidation"}}
+      <label for='contact-phone'>{{i18n phoneLabel}}</label>
+      {{phone-input phoneValidation="phoneValidation"
+                    placeholder=phonePlaceholder}}
     </div>
   {{/if}}
   {{#if forInstitution}}
     <div class="input institution">
-      <label for='contact-institution'>{{i18n (concat 'landing.' type '.contact.name.label')}}<span>*</span></label>
-      {{text-field value=institution placeholderKey=(concat 'landing.' type '.contact.name.placeholder') id="contact-institution" autocorrect="off" autocapitalize="off"}}
+      <label for='contact-institution'>{{i18n institutionLabel}}<span>*</span></label>
+      {{text-field value=institution
+                   placeholderKey=institutionPlaceholder
+                   autocorrect="off"
+                   autocapitalize="off"}}
     </div>
     <div class="input">
-      <label for='contact-position'>{{i18n (concat 'landing.' type '.contact.position.label')}}<span>*</span></label>
-      {{text-field value=position placeholderKey=(concat 'landing.' type '.contact.position.placeholder') id="contact-position" autocorrect="off" autocapitalize="off"}}
+      <label for='contact-position'>{{i18n positionLabel}}<span>*</span></label>
+      {{text-field value=position
+                   placeholderKey=positionPlaceholder
+                   autocorrect="off"
+                   autocapitalize="off"}}
     </div>
   {{/if}}
   <div class="input message">
-    <label>{{i18n 'landing.contact.message.label'}}<span>*</span></label>
-    {{textarea value=message class="contact-message" placeholder=(i18n 'landing.contact.message.placeholder')}}
+    <label>{{i18n messageLabel}}<span>*</span></label>
+    {{textarea value=message
+               class="contact-message"
+               placeholder=(i18n messagePlaceholder)}}
   </div>
 {{/embedded-modal-body}}
+
 <div class="modal-footer">
-  {{d-button class='btn btn-large btn-primary' disabled=submitDisabled action="submitContact" label='landing.contact.submit'}}
+  {{d-button class='btn btn-large btn-primary'
+             disabled=submitDisabled
+             action="submitContact"
+             label='landing.contact.submit'}}
   {{conditional-loading-spinner condition=submitting size="small"}}
   {{contactResult}}
 </div>

@@ -1,13 +1,42 @@
 .landing-page.start {
   padding: 0;
 
-  .top {
-    flex-direction: column;
+  .alert {
+    margin-bottom: 0;
   }
 
-  .sign-up {
+  .title {
+    margin: 10px 0;
+  }
+
+  .top {
+    flex-direction: column;
+    margin: 20px 0;
+    display: flex;
+  }
+
+  .right {
     .modal-body {
-      padding: 5px 15px;
+      padding: 5px 10px;
+    }
+
+    .modal-footer {
+      padding: 15px;
+    }
+
+    @media all and (max-width: 350px) {
+      .static-image {
+        display: none;
+      }
+    }
+
+    .static-image {
+      top: -20px;
+      right: 40px;
+
+      img {
+        width: 40px;
+      }
     }
   }
 
@@ -36,9 +65,13 @@
     }
   }
 
-  .main {
-    padding: 40px 20px;
+  .top.invite-only .main {
     margin-bottom: 0;
+  }
+
+  .main {
+    padding: 10px;
+    margin-bottom: 20px;
     margin-right: 0;
 
     .large {
@@ -46,15 +79,14 @@
     }
   }
 
-  .links {
+  .left {
     justify-content: initial;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 0;
 
-    .p-text {
-      margin: 15px 0;
-      font-size: 1.2em;
+    .p-text.medium {
       width: 100%;
+      margin: 20px 0;
 
       img, i {
         float: left;
@@ -85,7 +117,31 @@
   }
 
   .locale-selection {
-    margin-top: 10px;
+    width: 100%;
+    border-top: 1px solid $primary-low;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.15);
+    background-color: $secondary;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 5px 10px 8px 10px;
+    z-index: 100;
+
+    a, .btn {
+      font-size: 0.9em;
+    }
+
+    .btn {
+      padding: 3px 6px;
+    }
+
+    .hidden-locales {
+      max-height: 70vh;
+      max-width: 90vw;
+      right: initial;
+      overflow: scroll;
+    }
   }
 
   .contact {
@@ -119,7 +175,8 @@
 
   .modal-body {
     padding: 15px;
-    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .input {
@@ -134,14 +191,14 @@
   #contact-phone, .intl-tel-input {
     width: 100%;
   }
+
+  .p-text.large {
+    margin-top: 0;
+  }
 }
 
 .landing-page {
   padding-top: 40px;
-
-  .p-text.title {
-    margin-bottom: 40px;
-  }
 
   .landing-statement {
     flex-direction: column;

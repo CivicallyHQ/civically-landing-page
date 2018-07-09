@@ -2,7 +2,11 @@ import computed from 'ember-addons/ember-computed-decorators';
 
 export default Discourse.Route.extend({
   model() {
-    this.site.get('categories').filter((c) => c.is_place && c.can_join).map((t) => t.location);
+    if (Discourse.SiteSettings.login_required) {
+      return {};
+    } else {
+      return this.site.get('categories').filter((c) => c.is_place && c.can_join).map((t) => t.location);
+    }
   },
 
   @computed()
@@ -16,7 +20,9 @@ export default Discourse.Route.extend({
     this.controllerFor('application').set('hideHeaderSearch', true);
 
     if (templateName === 'start') {
-      controller.set('locations', model);
+      if (!Discourse.SiteSettings.login_required) {
+        controller.set('locations', model);
+      }
       this.controllerFor('application').set('canSignUp', false);
     }
 
@@ -34,7 +40,7 @@ export default Discourse.Route.extend({
       into: 'landing',
       outlet: 'content'
     });
-    if (templateName === 'start') {
+    if (templateName === 'start' && !Discourse.SiteSettings.invite_only) {
       this.render('modal/create-account', {
         into: templateName,
         outlet: 'create-account',

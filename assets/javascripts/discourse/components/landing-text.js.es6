@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         this.set('text', cooked);
       });
     } else {
-      this.set('text', text);
+      this.set('text', new Handlebars.SafeString(text));
     }
   },
 
