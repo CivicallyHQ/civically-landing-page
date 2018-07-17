@@ -8,6 +8,7 @@
       {{/each}}
     </div>
   {{/if}}
+
   <div class="input">
     <label for='contact-name'>{{i18n nameLabel}}<span>*</span></label>
     {{text-field value=name
@@ -15,6 +16,7 @@
                  autocorrect="off"
                  autocapitalize="off"}}
   </div>
+
   <div class="input email">
     <label for='contact-email'>{{i18n emailLabel}}<span>*</span></label>
     {{text-field value=email
@@ -23,6 +25,7 @@
                  autocapitalize="off"}}
     <div class="fail">{{emailValidationError}}</div>
   </div>
+
   {{#if siteSettings.landing_contact_phone_enabled}}
     <div class="input phone">
       <label for='contact-phone'>{{i18n phoneLabel}}</label>
@@ -30,6 +33,7 @@
                     placeholder=phonePlaceholder}}
     </div>
   {{/if}}
+
   {{#if forInstitution}}
     <div class="input institution">
       <label for='contact-institution'>{{i18n institutionLabel}}<span>*</span></label>
@@ -52,6 +56,13 @@
                class="contact-message"
                placeholder=(i18n messagePlaceholder)}}
   </div>
+
+  {{#if forLaunch}}
+    <div class='privacy'>
+      {{{i18n 'landing.launch.contact.privacy'}}}
+    </div>
+  {{/if}}
+
 {{/embedded-modal-body}}
 
 <div class="modal-footer">

@@ -14,7 +14,7 @@ const customTextKeys = {
 
 export default Ember.Component.extend({
   formSubmitted: false,
-  classNames: ['landing-contact'],
+  classNameBindings: [':landing-contact', 'type'],
   type: 'individual',
 
   @on('init')

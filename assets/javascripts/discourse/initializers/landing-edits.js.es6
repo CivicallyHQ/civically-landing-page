@@ -44,7 +44,7 @@ export default {
           return helper.attach('button', {
             action: 'openContact',
             label: 'landing.contact.title',
-            className: 'contact btn-primary'
+            className: 'contact'
           });
         }
       });
