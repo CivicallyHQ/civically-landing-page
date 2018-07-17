@@ -24,6 +24,10 @@
       padding: 15px;
     }
 
+    .launch .modal-footer {
+      padding: 15px 10px;
+    }
+
     @media all and (max-width: 350px) {
       .static-image {
         display: none;
@@ -138,6 +142,7 @@
 
     .hidden-locales {
       max-width: 90vw;
+      max-height: 70vh;
       right: initial;
     }
   }

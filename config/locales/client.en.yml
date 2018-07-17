@@ -61,7 +61,7 @@ en:
 
           The story should involve law or government. We have a strict minimum age of 13 years.
 
-          <a href='/about'>Learn more about Civically</a>.
+        about: <a href='/about'>Learn more about Civically</a>.
 
         contact:
           title: "Tell us your story."

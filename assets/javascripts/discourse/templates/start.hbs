@@ -12,6 +12,10 @@
     <div class="left">
       {{#if siteSettings.invite_only}}
         {{landing-text content="landing.launch.description" classes="small" markdown=true}}
+
+        {{#unless site.mobileView}}
+          {{landing-text content="landing.launch.about" classes="small" markdown=true}}
+        {{/unless}}
       {{else}}
         {{landing-text classes='medium' content='landing.links.solve' emoji='man_pilot:t5'}}
         {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
@@ -19,7 +23,9 @@
       {{/if}}
     </div>
 
-    {{locale-selection}}
+    {{#unless siteSettings.invite_only}}
+      {{locale-selection}}
+    {{/unless}}
   </div>
   <div class="right">
     {{#if siteSettings.invite_only}}
