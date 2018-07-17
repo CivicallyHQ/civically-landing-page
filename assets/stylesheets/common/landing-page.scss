@@ -125,6 +125,17 @@
       .highlight {
         margin: 0 -15px;
       }
+
+      .static-image {
+        position: relative;
+        right: initial;
+        top: initial;
+        margin-top: 30px;
+
+        img {
+          width: 100px;
+        }
+      }
     }
 
     .locale-selection {
@@ -220,11 +231,11 @@
     }
 
     .static-image {
-      top: 120px;
+      top: 90px;
       right: 30px;
 
       img {
-        width: 70px;
+        width: 80px;
       }
     }
 
@@ -538,6 +549,10 @@
 }
 
 .landing-contact.launch {
+  .p-text.large {
+    margin-top: 15px;
+  }
+
   .message {
     height: initial;
 
@@ -550,5 +565,13 @@
     max-width: 500px;
     font-size: 0.9em;
     margin: 5px 0;
+  }
+
+  .input.email {
+    height: 85px;
+
+    .fail {
+      font-size: 0.9em;
+    }
   }
 }
