@@ -53,13 +53,17 @@ en:
           <a href='/about' class='p-link'>Civically</a> is where people help each other navigate law and government, launching late 2018.
           We're currently collecting stories.
 
-        title: "Share your story."
+        title: "Share your story. Help others."
         description: |
           <div class="highlight">
           We’re looking for stories about housing, traffic, employment, seniors, small businesses, consumer rights, migration and privacy.
           </div>
 
-          The story should involve law or government. We have a strict minimum age of 13 years.
+          Your story is important. Describing what you dealt with can help others who are dealing with a similar issue.
+
+          Help us build a community knowledge base so that next time you're faced with an issue, you'll also have examples to learn from.   
+
+          The story must involve law or government. We have a strict minimum age of 13 years.
 
         about: <a href='/about'>Learn more about Civically</a>.
 
