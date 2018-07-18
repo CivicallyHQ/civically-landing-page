@@ -16,4 +16,14 @@ class ContactMailer < ActionMailer::Base
       message: contact['message']
     )
   end
+
+  def story_email(to_address, contact)
+    build_email(
+      to_address,
+      template: 'story_mailer',
+      name: contact['name'],
+      email: contact['email'],
+      story: contact['message']
+    )
+  end
 end

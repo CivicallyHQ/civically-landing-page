@@ -11,6 +11,14 @@ en:
       position: %{position}
       message: %{message}
 
+  story_mailer:
+    title: "Story"
+    subject_template: "%{name}'s Story"
+    text_body_template: |
+      name: %{name}
+      email: %{email}
+      story: %{story}
+
   site_settings:
     landing_contact_email: "Email to send landing page contacts to."
     landing_contact_phone_enabled: "Add a phone input in the landing contact form."
