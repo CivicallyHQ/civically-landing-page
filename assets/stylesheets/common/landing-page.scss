@@ -221,6 +221,7 @@
   .right {
     text-align: left;
     position: relative;
+    max-width: 522px;
 
     &>.p-text {
       padding: 0 15px;
@@ -572,6 +573,55 @@
 
     .fail {
       font-size: 0.9em;
+    }
+  }
+}
+
+// Tablet
+
+@media all and (max-width: 1024px) and (orientation: landscape), screen and (max-height: 775px) {
+  .landing-page.start {
+    .top {
+      padding: 0 20px;
+    }
+
+    .left {
+      .static-image img {
+        width: 80px;
+      }
+    }
+
+    .right {
+      .static-image img {
+        width: 70px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 775px) {
+  .landing-page.start {
+    text-align: center;
+
+    .top {
+      padding: 0 10px;
+      display: inline-block;
+      max-width: 90%;
+      text-align: left;
+    }
+
+    .main {
+      margin-bottom: 20px;
+
+      .bottom-left {
+        display: none;
+      }
+    }
+
+    .right {
+      .static-image img {
+        width: 70px;
+      }
     }
   }
 }
