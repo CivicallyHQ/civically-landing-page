@@ -1,6 +1,3 @@
-{{#if siteSettings.invite_only}}
-  {{landing-text content="landing.launch.info" classes="small alert alert-info"}}
-{{/if}}
 <div class="{{topClasses}}">
   <div class="main">
     {{#if siteSettings.invite_only}}
@@ -16,6 +13,7 @@
         {{#unless site.mobileView}}
           <div class="bottom-left">
             {{landing-text content="landing.launch.about" classes="small" markdown=true}}
+            {{landing-text content="landing.launch.organisation" classes="small" markdown=true}}
           </div>
         {{/unless}}
       {{else}}
@@ -31,6 +29,7 @@
   </div>
   <div class="right">
     {{#if siteSettings.invite_only}}
+      <a name='story'></a> 
       {{landing-contact type='launch' embedded=true}}
       {{static-image name='people/35'}}
     {{else}}

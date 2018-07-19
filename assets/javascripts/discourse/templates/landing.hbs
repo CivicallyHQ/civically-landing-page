@@ -1,4 +1,7 @@
 <div class="landing-page {{contentClass}}">
+  {{#if siteSettings.invite_only}}
+    {{landing-text content="landing.launch.info" classes="small alert alert-info"}}
+  {{/if}}
   {{outlet 'content'}}
   <div class="centered">
     {{landing-footer}}

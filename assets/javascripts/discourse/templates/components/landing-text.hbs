@@ -10,6 +10,11 @@
   {{#if url}}
     <a href="{{url}}" target='_blank'>{{text}}</a>
   {{else}}
-    <span>{{text}}</span>
+    <span>
+      {{#if image}}
+        <span class="{{imageClasses}}">{{image}}</span>
+      {{/if}}
+      {{text}}
+    </span>
   {{/if}}
 {{/if}}

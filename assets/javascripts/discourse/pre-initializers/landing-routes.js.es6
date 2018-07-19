@@ -8,9 +8,9 @@ export default {
   initialize(registry, app) {
     app.LandingStartController = LandingController.extend();
     app.LandingGovernmentsController = LandingController.extend();
-    app.LandingOrganizationsController = LandingController.extend();
+    app.LandingOrganisationsController = LandingController.extend();
     app.LandingStartRoute = LandingRoute.extend();
     app.LandingGovernmentsRoute = LandingRoute.extend();
-    app.LandingOrganizationsRoute = LandingRoute.extend();
+    app.LandingOrganisationsRoute = LandingRoute.extend();
   }
 };

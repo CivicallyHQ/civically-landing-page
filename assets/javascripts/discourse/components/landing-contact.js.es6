@@ -7,7 +7,7 @@ const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 
 
 const customTextKeys = {
   individual: [],
-  organisation: ['email', 'institution', 'position'],
+  organisation: ['email', 'phone', 'institution'],
   government: ['email', 'institution', 'position'],
   launch: ['title', 'name', 'message']
 };
@@ -19,7 +19,7 @@ export default Ember.Component.extend({
 
   @on('init')
   setupTypes() {
-    const defaultTypes = ['individual', 'organization', 'government'];
+    const defaultTypes = ['individual', 'organisation', 'government'];
     const type = this.get('type');
 
     if (defaultTypes.indexOf(type) > -1) {
@@ -64,7 +64,7 @@ export default Ember.Component.extend({
 
   @computed('type')
   forInstitution() {
-    return this.get('type') === 'government' || this.get('type') === 'organization';
+    return this.get('type') === 'government' || this.get('type') === 'organisation';
   },
 
   forLaunch: Ember.computed.equal('type', 'launch'),
@@ -151,7 +151,7 @@ export default Ember.Component.extend({
       buttons.push({
         class: classes,
         name: t,
-        label: `landing.${t}.link`
+        label: `landing.${t}.label`
       });
     });
 
