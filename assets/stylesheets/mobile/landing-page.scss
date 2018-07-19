@@ -232,3 +232,25 @@
     }
   }
 }
+
+.landing-page.organisations {
+  padding-top: 0;
+
+  > .text {
+    padding-top: 40px;
+    width: 95%;
+
+    > div.landing-contact {
+      padding: 5px;
+      width: 100%;
+    }
+
+    .subtitle {
+      margin-bottom: 30px;
+    }
+
+    .modal-footer {
+      padding: 15px;
+    }
+  }
+}
