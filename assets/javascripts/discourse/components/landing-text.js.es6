@@ -4,6 +4,7 @@ import { cookAsync } from 'discourse/lib/text';
 export default Ember.Component.extend({
   classNameBindings: [":p-text", "classes"],
   guestLocale: null,
+  linkClass: 'p-link',
 
   @on('init')
   setup() {
