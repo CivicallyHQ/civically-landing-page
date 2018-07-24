@@ -20,12 +20,12 @@
       padding: 5px 10px;
     }
 
-    .modal-footer {
-      padding: 15px;
-    }
-
     .launch .modal-footer {
       padding: 15px 10px;
+    }
+
+    .modal-footer {
+      padding: 15px;
     }
 
     @media all and (max-width: 350px) {
@@ -35,11 +35,11 @@
     }
 
     .static-image {
-      top: -5px;
+      top: -30px;
       right: 30px;
 
       img {
-        width: 40px;
+        width: 55px;
       }
     }
   }
@@ -149,6 +149,14 @@
 
   .contact {
     left: 20px;
+  }
+
+  .story {
+    margin-top: 40px;
+
+    .modal-footer {
+      padding: 15px;
+    }
   }
 }
 
