@@ -57,7 +57,7 @@
     padding: 20px 30px;
     border: 1px solid $primary-low;
     border-radius: 4px;
-    max-width: 600px;
+    max-width: 650px;
     z-index: 1;
     text-align: center;
 
@@ -74,6 +74,10 @@
     .launching {
       margin: 15px 0;
       font-style: italic;
+    }
+
+    .btn {
+      margin-top: 20px;
     }
   }
 }

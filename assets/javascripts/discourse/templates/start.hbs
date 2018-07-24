@@ -1,5 +1,5 @@
 {{#if siteSettings.invite_only}}
-  {{landing-text content="landing.launch.title" classes="title centered" name="story"}}
+  {{landing-text content="landing.launch.story.title" classes="title centered" name="story"}}
 {{/if}}
 
 <div class="{{topClasses}}">
@@ -10,7 +10,7 @@
 
     <div class="left">
       {{#if siteSettings.invite_only}}
-        {{landing-text content="landing.launch.description" classes="small" markdown=true}}
+        {{landing-text content="landing.launch.story.description" classes="small" markdown=true}}
 
         {{#unless site.mobileView}}
           <div class="bottom-left">

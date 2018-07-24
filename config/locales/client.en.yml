@@ -55,13 +55,14 @@ en:
           launching: Launching late 2018
           link: "We're collecting stories about experiences with law or government."
 
-        title: "Share your story. Help others."
-        description: |
-          <div class="highlight">
-          We’re looking for stories about law or government involving housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy.
-          </div>
+        story:
+          title: "Share Your Story"
+          description: |
+            <div class="highlight">
+            We’re looking for stories about law or government involving housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy.
+            </div>
 
-          What you've been through can help others going through the same thing.
+            What you've been through can help others going through the same thing.
 
         legal: "Do you work with people dealing with legal or government issues?"
         links:
