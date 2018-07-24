@@ -1,5 +1,40 @@
+.header-buttons {
+  .btn.about, .btn.contact {
+    .fa {
+      margin: 0;
+    }
+  }
+
+  .btn.about {
+    padding: 6px 15px;
+  }
+}
+
 .landing-page.start {
   padding: 0;
+
+  .launch-landing {
+    height: calc(100vh - 60px);
+  }
+
+  .landing-banner {
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
+
+    .landing-welcome {
+      border: none;
+
+      .title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .small {
+        font-size: 1.1em;
+      }
+    }
+  }
 
   .alert {
     margin-bottom: 0;
@@ -7,6 +42,10 @@
 
   .title {
     margin: 10px 0;
+
+    span {
+      text-align: center;
+    }
   }
 
   .top {
@@ -69,8 +108,14 @@
     }
   }
 
-  .top.invite-only .main {
-    margin-bottom: 0;
+  .top.invite-only {
+    .main {
+      margin-bottom: 0;
+    }
+
+    .right {
+      margin-top: 0;
+    }
   }
 
   .main {

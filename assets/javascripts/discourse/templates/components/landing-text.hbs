@@ -8,9 +8,9 @@
   {{#link-to linkTo}}{{text}}{{/link-to}}
 {{else}}
   {{#if url}}
-    <a href="{{url}}" target='_blank'>{{text}}</a>
+    <a href="{{url}}" class="p-link" target='_blank'>{{text}}</a>
   {{else if name}}
-    <a name="{{name}}" target='_blank' class="p-link">{{text}}</a>
+    <a name="{{name}}" class="p-link">{{text}}</a>
   {{else}}
     <span>
       {{#if image}}

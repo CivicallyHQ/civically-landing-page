@@ -1,19 +1,91 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-.d-header .contact {
+.d-header .btn {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 10px;
+  margin-right: 15px;
+
+  &.login-button {
+    padding: 6px 12px;
+    font-size: 1em;
+    margin: 0;
+
+    .fa {
+      margin-right: 7px;
+    }
+  }
+}
+
+.start {
+  .launch-landing {
+    height: calc(100vh - 80px);
+
+    .landing-banner {
+      height: 100%;
+    }
+  }
+}
+
+.landing-banner {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 21px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $primary-low;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+  position: relative;
+
+  &:before {
+    content:"";
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .landing-welcome {
+    background-color: $secondary;
+    display: inline-block;
+    padding: 20px 30px;
+    border: 1px solid $primary-low;
+    border-radius: 4px;
+    max-width: 600px;
+    z-index: 1;
+    text-align: center;
+
+    .p-text {
+      text-align: center;
+    }
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .launching {
+      margin: 15px 0;
+      font-style: italic;
+    }
+  }
 }
 
 .landing-page {
 
   .title-area {
     margin-bottom: 60px;
+  }
 
-    .title {
-      margin-bottom: 20px;
-    }
+  .title {
+    margin-bottom: 20px;
   }
 
   .p-text {
@@ -56,12 +128,12 @@
 
   &.start {
 
-    .alert {
-      margin-bottom: 30px;
+    > .p-text.title {
+      margin: 80px 0 30px 0;
     }
 
-    .title {
-      margin-bottom: 20px;
+    .alert {
+      margin-bottom: 30px;
     }
 
     .top {
@@ -70,6 +142,18 @@
 
       &.invite-only {
         margin: 0;
+
+        .left {
+          .static-image {
+            float: right;
+            margin-top: 0;
+            margin-right: 60px;
+
+            img {
+              width: 70px;
+            }
+          }
+        }
       }
     }
 
@@ -87,10 +171,11 @@
       }
 
       .bottom-left {
-        display: flex;
-
         .p-text {
-          margin-right: 20px;
+          p {
+            margin-top: 5px;
+            margin-bottom: 20px;
+          }
         }
       }
     }
@@ -204,13 +289,13 @@
   }
 
   &.organisations {
-    background-color: rgba($tertiary, 0.2);
+    background-color: rgba($tertiary, 0.1);
     text-align: center;
 
     > .text {
       display: inline-block;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 30px;
       width: 70%;
 
       > div {
@@ -226,12 +311,12 @@
       > a {
         display: inline-block;
       }
-    }
 
-    .subtitle {
-      margin-top: 10px;
-      margin-bottom: 100px;
-      width: 600px;
+      .subtitle {
+        margin-top: 10px;
+        margin-bottom: 60px;
+        width: 600px;
+      }
     }
   }
 
@@ -270,11 +355,11 @@
     }
 
     .static-image {
-      top: 90px;
+      top: 80px;
       right: 30px;
 
       img {
-        width: 80px;
+        width: 70px;
       }
     }
   }
@@ -426,7 +511,7 @@
 }
 
 .landing-paragraph {
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 
   a {
     @extend .p-link;
@@ -584,10 +669,6 @@
 }
 
 .landing-contact.launch {
-  .p-text.large {
-    margin-top: 15px;
-  }
-
   .message {
     height: initial;
 
@@ -615,10 +696,6 @@
 
 .story {
   margin-top: 70px;
-
-  .p-text.title {
-    margin-bottom: 40px;
-  }
 
   .p-text.small {
     p {
@@ -654,6 +731,11 @@
 
 @media all and (max-width: 1024px) and (orientation: landscape), screen and (max-height: 775px) {
   .landing-page.start {
+    .launch-landing {
+      margin-top: -20px;
+      height: calc(100vh - 60px);
+    }
+
     .top {
       padding: 0 20px;
     }
@@ -661,12 +743,6 @@
     .left {
       .static-image img {
         width: 80px;
-      }
-    }
-
-    .right {
-      .static-image img {
-        width: 70px;
       }
     }
   }
@@ -679,7 +755,6 @@
     .top {
       padding: 0 10px;
       display: inline-block;
-      max-width: 90%;
       text-align: left;
     }
 

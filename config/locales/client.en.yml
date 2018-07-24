@@ -49,27 +49,26 @@ en:
         link: "Contact Us About A Donation"
 
       launch:
-        info: >
-          <a href='/about' class='p-link'>Civically</a> is where people help each other navigate law and government, launching late 2018.
-          We're currently <a href='/start#story' class='p-link'>collecting stories</a>.
+        banner:
+          title: "Welcome to Civically"
+          subtitle: Where people help each other navigate law and government.
+          launching: Launching late 2018
+          link: "We're collecting stories about experiences with law or government."
 
         title: "Share your story. Help others."
         description: |
           <div class="highlight">
-          We’re looking for stories about housing, traffic, employment, seniors, small businesses, consumer rights, migration and privacy.
+          We’re looking for stories about law or government involving housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy.
           </div>
 
           What you've been through can help others going through the same thing.
 
-          We're building a community knowledge base, where people are telling it how it is.
-
         legal: "Do you work with people dealing with legal or government issues?"
         links:
-          why: "[Your Story Matters](#why)"
-          organisation: "[For Organisations](/organisations)"
-          about: "[About Us](/about)"
+          why: "[Why your story matters.](#why)"
+          organisation: "[How we help organisations.](/organisations)"
         why:
-          title: "Your Story Matters"
+          title: "Why Your Story Matters"
           description: |
             Dealing with government or law can make us feel **angry, confused and powerless**.
 
@@ -83,8 +82,10 @@ en:
 
             That's why we want to hear your story. Before we launch Civically in late 2018 we are collecting stories from a variety of people. Those stories will help us create the **right kind of community** for Civically to work.
 
+            We’re particularly looking for stories about housing, traffic, employment, seniors, small businesses, consumer rights, migration and privacy, but if you have a law or government story about something else we'd still love to hear from you.
+
         contact:
-          title: "Tell us your story."
+          title: "Your Story"
           name:
             label: "Name or nickname"
             placeholder: "What you'd like to be called."
@@ -143,7 +144,7 @@ en:
             During its development phase Civically has been operating as an Australian corporation. As we move closer to launch we are actively exploring non-profit structures in Australia and elsewhere.
 
         open_source:
-          title: Open source and battle tested.
+          title: Open source and battle-tested.
           description: |
             Civically was born out of work on open source forum software called [Discourse](meta.discourse.org). Many parts of Civically's functionality are already in use in thousands of online communities around the world.
 

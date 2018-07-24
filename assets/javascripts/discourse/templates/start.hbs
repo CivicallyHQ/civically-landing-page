@@ -1,10 +1,12 @@
+{{#if siteSettings.invite_only}}
+  {{landing-text content="landing.launch.title" classes="title centered" name="story"}}
+{{/if}}
+
 <div class="{{topClasses}}">
   <div class="main">
-    {{#if siteSettings.invite_only}}
-      {{landing-text content="landing.launch.title" classes="title"}}
-    {{else}}
+    {{#unless siteSettings.invite_only}}
       {{landing-text content="landing.tagline" classes="title"}}
-    {{/if}}
+    {{/unless}}
 
     <div class="left">
       {{#if siteSettings.invite_only}}
@@ -12,9 +14,9 @@
 
         {{#unless site.mobileView}}
           <div class="bottom-left">
+            {{static-image name='people/6'}}
             {{landing-text content="landing.launch.links.why" classes="small" markdown=true}}
             {{landing-text content="landing.launch.links.organisation" classes="small" markdown=true}}
-            {{landing-text content="landing.launch.links.about" classes="small" markdown=true}}
           </div>
         {{/unless}}
       {{else}}
@@ -32,7 +34,9 @@
     {{#if siteSettings.invite_only}}
       <a name='story'></a>
       {{landing-contact type='launch' embedded=true}}
-      {{static-image name='people/35'}}
+      {{#unless site.mobileView}}
+        {{static-image name='people/35'}}
+      {{/unless}}
     {{else}}
       {{landing-text content='landing.sign_up' classes="large"}}
       {{landing-text content="landing.sign_up_tagline" classes="small"}}

@@ -1,6 +1,21 @@
 <div class="landing-page {{contentClass}}">
   {{#if siteSettings.invite_only}}
-    {{landing-text content="landing.launch.info" classes="small alert alert-info"}}
+    <div class="launch-landing">
+      <div class="landing-banner" style="{{bannerStyle}}">
+        <div class="landing-welcome">
+          {{landing-text content="landing.launch.banner.title" classes="title"}}
+          {{landing-text content="landing.launch.banner.subtitle" classes="small subtitle"}}
+          {{landing-text content="landing.launch.banner.launching" classes="small launching"}}
+
+          <a class="link" href='/start#story'>
+            {{landing-text content="landing.launch.banner.link" classes="small" url='/start#story'}}
+            {{#if isStart}}
+              {{d-icon 'chevron-down'}}
+            {{/if}}
+          </a>
+        </div>
+      </div>
+    </div>
   {{/if}}
   {{outlet 'content'}}
   <div class="centered">

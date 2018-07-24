@@ -4,7 +4,10 @@ import showModal from 'discourse/lib/show-modal';
 
 export default {
   name: 'landing-edits',
-  initialize(){
+  initialize(container){
+    const currentUser = container.lookup('current-user:main');
+    const site = container.lookup("site:main");
+
     withPluginApi('0.8.12', api => {
       api.modifyClass('controller:create-account', {
         @observes('emailValidation', 'usernameValidation', 'nameValidation', 'passwordValidation')
@@ -39,17 +42,33 @@ export default {
         }
       });
 
-      api.decorateWidget('home-logo:after', (helper) => {
-        if (helper.attrs.route && helper.attrs.route.indexOf('landing') > -1) {
-          return helper.attach('button', {
+      api.decorateWidget('header-buttons:before', (helper) => {
+        if (!currentUser && helper.attrs.route && helper.attrs.route.indexOf('landing') > -1) {
+          let aboutAttrs = {
+            href: '/about',
+            className: 'about btn',
+            icon: 'info'
+          };
+
+          let contactAttrs = {
             action: 'openContact',
-            label: 'landing.contact.title',
-            className: 'contact'
-          });
+            className: 'contact',
+            icon: 'envelope'
+          };
+
+          if (!site.mobileView) {
+            aboutAttrs['label'] = 'about.simple_title';
+            contactAttrs['label'] = 'landing.contact.title';
+          }
+
+          return [
+            helper.attach('link', aboutAttrs),
+            helper.attach('button', contactAttrs)
+          ]
         }
       });
 
-      api.attachWidgetAction('home-logo', 'openContact', () => {
+      api.attachWidgetAction('header', 'openContact', () => {
         showModal('landing-contact-modal');
       });
     });
