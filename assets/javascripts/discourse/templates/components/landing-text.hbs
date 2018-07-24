@@ -9,6 +9,8 @@
 {{else}}
   {{#if url}}
     <a href="{{url}}" target='_blank'>{{text}}</a>
+  {{else if name}}
+    <a name="{{name}}" target='_blank' class="p-link">{{text}}</a>
   {{else}}
     <span>
       {{#if image}}

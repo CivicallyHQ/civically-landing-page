@@ -12,8 +12,9 @@
 
         {{#unless site.mobileView}}
           <div class="bottom-left">
-            {{landing-text content="landing.launch.about" classes="small" markdown=true}}
-            {{landing-text content="landing.launch.organisation" classes="small" markdown=true}}
+            {{landing-text content="landing.launch.links.why" classes="small" markdown=true}}
+            {{landing-text content="landing.launch.links.organisation" classes="small" markdown=true}}
+            {{landing-text content="landing.launch.links.about" classes="small" markdown=true}}
           </div>
         {{/unless}}
       {{else}}
@@ -29,7 +30,7 @@
   </div>
   <div class="right">
     {{#if siteSettings.invite_only}}
-      <a name='story'></a> 
+      <a name='story'></a>
       {{landing-contact type='launch' embedded=true}}
       {{static-image name='people/35'}}
     {{else}}
@@ -40,7 +41,13 @@
   </div>
 </div>
 
-{{#unless siteSettings.invite_only}}
+{{#if siteSettings.invite_only}}
+  <div class="story centered">
+    {{landing-text classes="title centered" content="landing.launch.why.title" name='why'}}
+    {{landing-text classes="small" content="landing.launch.why.description" markdown=true}}
+    {{landing-contact type='launch' embedded=true}}
+  </div>
+{{else}}
   <div class="scroll-to-map centered" {{action 'scrollToMap'}}>
     {{landing-text classes="medium centered" content="landing.links.map" emoji="world_map"}}
     {{d-icon 'chevron-down'}}
@@ -49,4 +56,4 @@
   <div class="bottom centered">
     {{map-component locations=locations zoom='2' center=mapCenter}}
   </div>
-{{/unless}}
+{{/if}}

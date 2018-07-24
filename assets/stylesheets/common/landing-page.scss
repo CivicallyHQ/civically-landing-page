@@ -204,9 +204,7 @@
   }
 
   &.organisations {
-    background-image: url('/plugins/civically-private/images/people_background.png');
-    box-shadow: inset 0 0 0 1000px rgba($primary,.2);
-    background-size: 90%;
+    background-color: rgba($tertiary, 0.2);
     text-align: center;
 
     > .text {
@@ -277,13 +275,6 @@
 
       img {
         width: 80px;
-      }
-    }
-
-    .landing-contact {
-      .message .contact-message {
-        width: 500px;
-        height: 150px;
       }
     }
   }
@@ -602,6 +593,8 @@
 
     textarea {
       margin: 0;
+      width: 500px;
+      height: 150px;
     }
   }
 
@@ -617,6 +610,28 @@
     .fail {
       font-size: 0.9em;
     }
+  }
+}
+
+.story {
+  margin-top: 50px;
+
+  .p-text.title {
+    margin-bottom: 40px;
+  }
+
+  .p-text.small {
+    p {
+      margin: 1.5em 0;
+    }
+    strong {
+      @extend .highlight;
+      padding: 0 !important;
+    }
+  }
+
+  .landing-contact {
+    margin-top: 10px;
   }
 }
 
