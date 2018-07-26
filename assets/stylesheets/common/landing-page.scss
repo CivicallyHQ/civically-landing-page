@@ -132,8 +132,14 @@
 
   &.start {
 
+    a.anchor {
+      margin-top: 50px;
+      width: 100%;
+      display: inline-block;
+    }
+
     > .p-text.title {
-      margin: 80px 0 30px 0;
+      margin: 30px 0;
     }
 
     .alert {

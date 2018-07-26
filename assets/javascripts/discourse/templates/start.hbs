@@ -1,5 +1,6 @@
 {{#if siteSettings.invite_only}}
-  {{landing-text content="landing.launch.story.title" classes="title centered" name="story"}}
+  <a name="story" class="anchor"></a>
+  {{landing-text content="landing.launch.story.title" classes="title centered" url="#story" linkClass='p-link'}}
 {{/if}}
 
 <div class="{{topClasses}}">
@@ -33,7 +34,6 @@
   </div>
   <div class="right">
     {{#if siteSettings.invite_only}}
-      <a name='story'></a>
       {{landing-contact type='launch' embedded=true}}
       {{#unless site.mobileView}}
         {{static-image name='people/35'}}
@@ -48,14 +48,16 @@
 
 {{#if siteSettings.invite_only}}
   <div class="why centered">
-    {{landing-text classes="title centered" content="landing.launch.why.title" name='why'}}
+    <a name="why" class="anchor"></a>
+    {{landing-text classes="title centered" content="landing.launch.why.title" url="#why" linkClass='p-link'}}
     {{landing-text classes="small" content="landing.launch.why.description" markdown=true}}
     <a href='/start#story' class="btn btn-large btn-primary">
       {{i18n 'landing.launch.story.title'}}
     </a>
   </div>
   <div class="how centered">
-    {{landing-text classes="title centered" content="landing.launch.how.title" name='how'}}
+    <a name="how" class="anchor"></a>
+    {{landing-text classes="title centered" content="landing.launch.how.title" url="#how" linkClass='p-link'}}
     {{landing-text classes="small" content="landing.launch.how.description" markdown=true}}
     <a href='/start#story' class="btn btn-large btn-primary">
       {{i18n 'landing.launch.story.title'}}
