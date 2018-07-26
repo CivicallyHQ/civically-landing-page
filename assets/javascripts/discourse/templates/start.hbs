@@ -16,6 +16,7 @@
           <div class="bottom-left">
             {{static-image name='people/6'}}
             {{landing-text content="landing.launch.links.why" classes="small" markdown=true}}
+            {{landing-text content="landing.launch.links.how" classes="small" markdown=true}}
             {{landing-text content="landing.launch.links.organisation" classes="small" markdown=true}}
           </div>
         {{/unless}}
@@ -46,10 +47,19 @@
 </div>
 
 {{#if siteSettings.invite_only}}
-  <div class="story centered">
+  <div class="why centered">
     {{landing-text classes="title centered" content="landing.launch.why.title" name='why'}}
     {{landing-text classes="small" content="landing.launch.why.description" markdown=true}}
-    {{landing-contact type='launch' embedded=true}}
+    <a href='/start#story' class="btn btn-large btn-primary">
+      {{i18n 'landing.launch.story.title'}}
+    </a>
+  </div>
+  <div class="how centered">
+    {{landing-text classes="title centered" content="landing.launch.how.title" name='how'}}
+    {{landing-text classes="small" content="landing.launch.how.description" markdown=true}}
+    <a href='/start#story' class="btn btn-large btn-primary">
+      {{i18n 'landing.launch.story.title'}}
+    </a>
   </div>
 {{else}}
   <div class="scroll-to-map centered" {{action 'scrollToMap'}}>

@@ -697,12 +697,15 @@
   }
 }
 
-.story {
+.why, .how {
   margin-top: 70px;
 
   .p-text.small {
     p {
       margin: 1.5em 0;
+    }
+    a {
+      @extend .p-link;
     }
     strong {
       @extend .highlight;
@@ -713,7 +716,7 @@
 
       &[alt="not-alone"] {
         float: left;
-        margin-top: -5px;
+        margin-top: -8px;
         padding-right: 20px;
       }
 
@@ -721,11 +724,25 @@
         float: right;
         padding-left: 20px;
         margin-top: 10px;
+        height: 80px;
+      }
+
+      &[alt="contact"] {
+        float: left;
+        padding-right: 20px;
+        margin-top: -10px;
+        height: 75px;
+      }
+
+      &[alt="launch"] {
+        float: right;
+        padding-left: 20px;
+        margin-top: -10px;
       }
     }
   }
 
-  .landing-contact {
+  .btn-primary {
     margin-top: 30px;
   }
 }

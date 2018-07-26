@@ -157,6 +157,7 @@
 
   .centered {
     margin-top: 10px;
+    width: 100%;
   }
 
   .map-component {
@@ -196,11 +197,30 @@
     left: 20px;
   }
 
-  .story {
+  .why, .how {
     margin-top: 40px;
 
-    .modal-footer {
-      padding: 15px;
+    .btn-primary {
+      margin-top: 10px;
+    }
+
+    img {
+      &[alt="not-alone"] {
+        margin-top: 5px;
+        padding-right: 20px;
+      }
+
+      &[alt="future"] {
+        margin-top: 14px;
+      }
+
+      &[alt="contact"] {
+        margin-top: 0px;
+      }
+
+      &[alt="launch"] {
+        margin-top: 0px;
+      }
     }
   }
 }

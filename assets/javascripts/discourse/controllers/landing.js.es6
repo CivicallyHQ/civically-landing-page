@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
         url = peopleBannerUrl();
       }
 
-      style += `background-image: url('${url}');`
+      style += `background-image: url('${url}');`;
     }
     return new Handlebars.SafeString(style);
   },

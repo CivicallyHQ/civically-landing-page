@@ -67,6 +67,7 @@ en:
         legal: "Do you work with people dealing with legal or government issues?"
         links:
           why: "[Why your story matters.](#why)"
+          how: "[How this all works.](#how)"
           organisation: "[How we help organisations.](/organisations)"
         why:
           title: "Why Your Story Matters"
@@ -84,6 +85,25 @@ en:
             That's why we want to hear your story. Before we launch Civically in late 2018 we are collecting stories from a variety of people. Those stories will help us create the **right kind of community** for Civically to work.
 
             We’re particularly looking for stories about housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy, but if you have a law or government story about something else we'd still love to hear from you.
+
+        how:
+          title: "How This All Works"
+          description: |
+            We're glad you're interested in sharing your story. This is how it will work.
+
+            ### Step 1
+            **You contact us** through our [story form](#story), **or we contact you** through your lawyer or social worker.
+
+            ### Step 2
+            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about you and your story, and to make sure you understand what we're doing.
+
+            ### Step 3
+            **We'll give you private access** to the Civically platform to write your story, read other people's stories and talk with other people who've shared stories.
+
+            ### Step 4
+            ![launch](/plugins/civically-private/images/people/2.png) **Civically will launch** in late 2018, allowing anyone to sign up and share their story, read other people's stories, ask questions and be part of our community.
+
+            We'll be on hand at all times to help you out if you have any issues or concerns.
 
         contact:
           title: "Your Story"
