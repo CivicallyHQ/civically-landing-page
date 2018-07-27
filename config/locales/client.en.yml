@@ -131,18 +131,22 @@ en:
             label: "Organisation"
             placeholder: "Organisation you work at."
         people:
-          title: Find the right people.
+          title: Find people who need help.
           description: |
-            People trust "people like them" more than they trust "institutions", "experts" or even "facts". People seek out the advice of other people, even if they have all the information they need already.
+            When dealing with law or government, most people prefer the help of 'people like them' over that of an 'expert' or 'authority' ([World Justice Project Report](https://worldjusticeproject.org/sites/default/files/documents/WJP_Access-Justice_January_2018_LR_0.pdf)).
 
-            Civically is an online community specifically built for people who need help with law and government. By fostering a community around civic issues, Civicially will be both a user-generated knowledge base and a clearing house for your organisation's work.
+            Civically is an online community specifically built to connect people who need help with 'people like them'. We surface the informal interactions that currently 'resolve' most legal and government issues.
+
+            By surfacing and structuring the informal 'grey-area' of civic life, Civicially can be both a user-generated knowledge base and an online clearing-house for your organisation's work.
 
         healthy:
           title: In a healthy environment.
           description: |
-            Online discussion can sometimes be unhealthy. Social platforms rely on user's data to drive profits and are often designed to polarise or for instant gratification.
+            Social platforms typically rely on user's data to drive profits, and are often designed to polarise or for instant gratification. Deceptive or misleading information can spread easily.
 
-            Civically is designed to produce constructive discussion and enagement. We don't, and never will, sell user's data. We really respect privacy and work hard to foster a healthy environment.
+            Civically uses both human moderators and sophisticated technology to foster constructive discussion that spreads accurate, useful information.
+
+            We don't, and never will, sell user's data. We really respect privacy and work hard to foster a healthy environment.
 
         help:
           title: Collaborate locally and globally.
@@ -167,9 +171,9 @@ en:
         open_source:
           title: Open source and battle-tested.
           description: |
-            Civically was born out of work on open source forum software called [Discourse](meta.discourse.org). Many parts of Civically's functionality are already in use in thousands of online communities around the world.
+            Civically was born out of work on an industry-leading discussions software platform ([Discourse](https://discourse.org)). Many parts of Civically's functionality are already in use in thousands of online communities around the world.
 
-            This means that even before we launch we know our features work and are user-friendly. It also means that by working with Civically you're also supporting the valuable work of many other community-minded organisations.
+            This means that even before we launch we know our features work and are user-friendly. It also means that by working with Civically you're supporting the valuable work of many other community-minded organisations.
 
       team:
         label: "Enquire About Our Team"
