@@ -126,10 +126,6 @@
     }
   }
 
-  .highlight, .alert {
-    border-radius: 4px;
-  }
-
   &.start {
 
     a.anchor {
@@ -148,6 +144,7 @@
 
     .top {
       margin: 40px 0;
+      padding: 0 20px;
       display: flex;
 
       &.invite-only {
@@ -190,16 +187,6 @@
       }
     }
 
-    .highlight {
-      padding: 8px 15px;
-      border-radius: 4px;
-      border: 1px solid $primary-very-low;
-
-      li:last-of-type p {
-        margin-bottom: 0;
-      }
-    }
-
     .left {
       display: flex;
       flex-direction: column;
@@ -223,8 +210,11 @@
         @extend a.p-link;
       }
 
-      .highlight {
+      .story-type {
         margin: 0 -15px;
+        padding: 8px 15px;
+        border-radius: 4px;
+        border: 1px solid $primary-very-low;
       }
 
       .static-image {
@@ -307,6 +297,10 @@
       text-align: center;
       padding-top: 30px;
       width: 70%;
+
+      strong {
+        @extend .highlight;
+      }
 
       > div {
         background-color: $secondary;
@@ -760,10 +754,6 @@
     .launch-landing {
       margin-top: -20px;
       height: calc(100vh - 60px);
-    }
-
-    .top {
-      padding: 0 20px;
     }
 
     .left {
