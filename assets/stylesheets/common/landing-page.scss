@@ -20,64 +20,8 @@
   .launch-landing {
     height: calc(100vh - 80px);
 
-    .landing-banner {
+    .site-banner {
       height: 100%;
-    }
-  }
-}
-
-.landing-banner {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 21px;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid $primary-low;
-  box-sizing: border-box;
-  margin-bottom: 40px;
-  position: relative;
-
-  &:before {
-    content:"";
-    display:block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-
-  .landing-welcome {
-    background-color: $secondary;
-    display: inline-block;
-    padding: 20px 30px;
-    border: 1px solid $primary-low;
-    border-radius: 4px;
-    max-width: 650px;
-    z-index: 1;
-    text-align: center;
-
-    .p-text {
-      text-align: center;
-    }
-
-    .title {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 1;
-    }
-
-    .launching {
-      margin: 15px 0;
-      font-style: italic;
-    }
-
-    .btn {
-      margin-top: 20px;
     }
   }
 }
@@ -178,6 +122,8 @@
       }
 
       .bottom-left {
+        margin-top: 15px;
+
         .p-text {
           p {
             margin-top: 5px;
@@ -359,7 +305,8 @@
     }
 
     .static-image {
-      top: 80px;
+      position: absolute;
+      top: 50px;
       right: 30px;
 
       img {
@@ -559,6 +506,10 @@
     }
   }
 
+  &.launch {
+    margin-top: 20px;
+  }
+
   .modal-body {
     display: inline-block;
     overflow: initial;
@@ -716,14 +667,14 @@
 
       &[alt="not-alone"] {
         float: left;
-        margin-top: -8px;
-        padding-right: 20px;
+        margin-top: 5px;
+        padding-right: 25px;
       }
 
       &[alt="future"] {
         float: right;
-        padding-left: 20px;
-        margin-top: 10px;
+        padding-left: 25px;
+        margin-top: 5px;
         height: 80px;
       }
 

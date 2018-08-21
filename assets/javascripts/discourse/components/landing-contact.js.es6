@@ -9,7 +9,7 @@ const customTextKeys = {
   individual: [],
   organisation: ['email', 'phone', 'institution'],
   government: ['email', 'institution', 'position'],
-  launch: ['title', 'name', 'message']
+  launch: ['name', 'message']
 };
 
 export default Ember.Component.extend({
@@ -52,7 +52,9 @@ export default Ember.Component.extend({
       let parentKey = custom.indexOf(k) > -1 ? `landing.${type}.contact` : 'landing.contact';
 
       if (k === 'title') {
-        props['title'] = `${parentKey}.title`;
+        if (type !== 'launch') {
+          props['title'] = `${parentKey}.title`;
+        }
       } else {
         props[`${k}Label`] = `${parentKey}.${k}.label`;
         props[`${k}Placeholder`] = `${parentKey}.${k}.placeholder`;

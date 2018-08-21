@@ -51,67 +51,64 @@ en:
       launch:
         banner:
           title: "Welcome to Civically"
-          subtitle: Where people help each other navigate law and government.
-          launching: Launching late 2018
-          link: "We're collecting stories about experiences with law or government."
+          subtitle: "Where people help each other navigate law and government."
+          launching: "Launching Early 2019"
+          link: "Got a Problem?"
 
         story:
-          title: "Share Your Story"
+          title: "Tell Us About It"
           description: |
+            Got a problem, but can't afford a lawyer? Feel like the system is confusing or unfair? Tell us about it.
+
             <div class="story-type highlight">
-            We’re looking for stories about law or government involving housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy.
+            If you're in an emergency, contact your local emergency services.
             </div>
 
-            What you've been through can help others going through the same thing.
+            We can't give you legal advice, but we can help you gather your thoughts and make the right move.
 
         legal: "Do you work with people dealing with legal or government issues?"
         links:
-          why: "[Why your story matters.](#why)"
-          how: "[How this all works.](#how)"
-          organisation: "[How we help organisations.](/organisations)"
+          why: "[Why talk with us?](#why)"
+          how: "[How this works.](#how)"
+          organisation: "[How we help organisations.](/organisations#banner)"
         why:
-          title: "Why Your Story Matters"
+          title: "Why Talk With Us"
           description: |
-            Dealing with government or law can make us feel **angry, confused and powerless**.
+            Trying to solve a problem through lawyers or the government can make us feel **angry, confused and powerless**.
 
-            It can be frustratingly slow, and then many things can happen all at once. It can be hard to find people who make sense or understand what we're going through. It can feel like **the system is large, uncaring and out of our control**.
+            ![not-alone](/plugins/civically-private/images/people/18.png) Lawyers can be expensive and intimidating. Government can be frustratingly slow and bureaucratic. It can be hard to find people who make sense or understand what you're going through. It can feel like **the system is large, uncaring and out of our control**.
 
-            ![not-alone](/plugins/civically-private/images/people/18.png) **You're not alone**. In fact, this is how most people feel about law and government. That's why we built Civically. It's a place that makes it all a bit clearer and easier, and puts you in control.
+            **You're not alone**. In fact, this is how most people feel. That's why we built Civically. It's a place that makes it all a bit clearer and easier, and puts you in control.
 
-            We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Your story, your experience with law and government in your own words, is the most important part of Civically.
+            ![future](/plugins/civically-private/images/people/13.png) We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Talk to us about whats happened, talk to other folks dealing with similar problems and find useful services.
 
-            ![future](/plugins/civically-private/images/people/13.png) Your story can **help others understand** what is going on when the same thing happens to them. It can help others know what to do and what not to do. Sharing your story can also **help you understand** what has happened and what may happen in the future.
-
-            That's why we want to hear your story. Before we launch Civically in late 2018 we are collecting stories from a variety of people. Those stories will help us create the **right kind of community** for Civically to work.
-
-            We’re particularly looking for stories about housing, traffic, employment, seniors, small businesses, consumer rights, migration or privacy, but if you have a law or government story about something else we'd still love to hear from you.
+            Civically is running a trial of its platform in 2018. Before we launch in early 2019 we are giving early access to people who . Those stories will help us create the **right kind of community** for Civically to work.
 
         how:
-          title: "How This All Works"
+          title: "How This Works"
           description: |
-            We're glad you're interested in sharing your story. This is how it will work.
+            This is a completely free service. This is how it works.
 
             ### Step 1
-            **You contact us** through our [story form](#story), **or we contact you** through your lawyer or social worker.
+            **You contact us** through our [form](#story), **or we contact you** through a social worker or a friend.
 
             ### Step 2
-            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about you and your story, and to make sure you understand what we're doing.
+            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about your story and explain what we do.
 
             ### Step 3
-            **We'll give you private access** to the Civically platform to write your story, read other people's stories and talk with other people who've shared stories.
+            **We'll give you private access** to Civically to post your story, read other people's stories, talk with them and figure out what to do next.
 
             ### Step 4
-            ![launch](/plugins/civically-private/images/people/2.png) **Civically will launch** in late 2018, allowing anyone to sign up and share their story, read other people's stories, ask questions and be part of our community.
+            ![launch](/plugins/civically-private/images/people/2.png) **Civically will become publicly available in early 2019**, allowing anyone to sign up and share their story, read your story, ask questions and be part of our community.
 
-            We'll be on hand at all times to help you out if you have any issues or concerns.
+            You can stop the conversation at any time. Anything you tell us privately is kept private. Anything you do on Civically can be removed at any time. You have complete control. Check out our <a href='/privacy' class='p-link'>privacy policy</a>, or our  <a href='/about' class='p-link'>About page</a> if you have more questions.
 
         contact:
-          title: "Your Story"
           name:
             label: "Name or nickname"
             placeholder: "What you'd like to be called."
           message:
-            label: "Story"
+            label: "Message"
             placeholder: "Briefly tell us what happened."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
@@ -135,25 +132,25 @@ en:
           description: |
             When dealing with law or government, most **people prefer the help of people like them** over that of an expert or authority ([World Justice Project Report](https://worldjusticeproject.org/sites/default/files/documents/WJP_Access-Justice_January_2018_LR_0.pdf)).
 
-            Civically is an online community specifically built to connect people who need help with "people like them". We surface the informal interactions that currently determine most legal and government issues.
+            Civically is a community built to connect people who need help with "people like them", while also giving them access to quality information and services. Our goal is to break down the barriers between people and 'the system'.
 
-            By surfacing and structuring the informal "grey-area" of civic life, Civically can be both a **user-generated knowledgebase** and an **online clearing-house** for your organisation's work.
+            By surfacing the informal "grey-area" of civic life, Civically can be an an **online clearing-house** for your organisation's work.
 
         healthy:
           title: In a healthy environment.
           description: |
-            Social platforms typically rely on user's data to drive profits, and are often designed to polarise or for instant gratification. Deceptive or misleading information can spread easily.
+            Social platforms typically rely on user's data to drive profits. They're designed to polarise, or for instant gratification. Deceptive or misleading information can spread easily.
 
             Civically uses both **human moderators and sophisticated technology** to foster constructive discussion that spreads accurate, useful information.
 
-            We don't, and never will, sell user's data. We really respect privacy and work hard to foster a **healthy environment**.
+            We don't, and never will, sell user's data. We really **respect privacy and work hard to foster a healthy environment**.
 
         help:
           title: Collaborate locally and globally.
           description: |
             People dealing with the law or government often need help from multiple sources. It's often hard for **all stakeholders to coordinate effectively**, or even know who else to talk to.
 
-            Civically is built to make it easy for all local stakeholders to find and work with each other. Civically is also a global platform, where **collaboration and knowledge-sharing** can easily transcend borders.
+            Civically is built to make it easy for all stakeholders to find and work with each other. Civically is also a global platform, where **collaboration and knowledge-sharing** can easily transcend borders.
 
         tech:
           title: On a platform built to scale.
@@ -164,7 +161,7 @@ en:
         non_profit:
           title: 100% free and non-profit.
           description: |
-            **Civically is completely free**. We plan to launch a service-based business in 2020 to support our work. We may also introduce small purchasing fees in the Civic App Store. Any profits will be re-invested into Civically in support of our mission.
+            **Civically is completely free**. We plan to launch a service-based business in 2020 to support our work. Any profits will be re-invested into Civically in support of our mission.
 
             During its development phase Civically has been operating as an Australian corporation. As we move closer to launch we are actively exploring non-profit structures in Australia and elsewhere.
 
