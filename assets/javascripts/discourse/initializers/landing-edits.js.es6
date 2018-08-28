@@ -64,7 +64,7 @@ export default {
           return [
             helper.attach('link', aboutAttrs),
             helper.attach('button', contactAttrs)
-          ]
+          ];
         }
       });
 
