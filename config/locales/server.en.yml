@@ -13,7 +13,7 @@ en:
 
   launch_mailer:
     title: "Early Access"
-    subject_template: "%{name}"
+    subject_template: "Early access for %{name}"
     text_body_template: |
       name: %{name}
       email: %{email}

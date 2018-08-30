@@ -109,7 +109,7 @@ en:
             placeholder: "What you'd like to be called."
           message:
             label: "Message"
-            placeholder: "Briefly tell us what you want help with, or why you want early access to Civically."
+            placeholder: "Briefly tell us why you want early access to Civically."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
 

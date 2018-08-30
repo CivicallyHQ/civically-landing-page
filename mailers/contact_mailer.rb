@@ -23,7 +23,7 @@ class ContactMailer < ActionMailer::Base
       template: 'launch_mailer',
       name: contact['name'],
       email: contact['email'],
-      launch: contact['message']
+      message: contact['message']
     )
   end
 end
