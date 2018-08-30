@@ -51,16 +51,16 @@ en:
       launch:
         banner:
           title: "Welcome to Civically"
-          subtitle: "Where people help each other navigate law and government."
+          subtitle: "Your ally when dealing with law or government."
           launching: "Launching Early 2019"
-          link: "Got a Problem?"
+          link: "Get Early Access"
 
-        story:
-          title: "Tell Us About It"
+        access:
+          title: "Get Early Access"
           description: |
             Got a problem, but can't afford a lawyer? Feel like the system is confusing or unfair? Tell us about it.
 
-            <div class="story-type highlight">
+            <div class="contact-type highlight">
             If you're in an emergency, contact your local emergency services.
             </div>
 
@@ -70,7 +70,7 @@ en:
         links:
           why: "[Why talk with us?](#why)"
           how: "[How this works.](#how)"
-          organisation: "[How we help organisations.](/organisations#banner)"
+          organisation: "[How we work with organisations.](/organisations#banner)"
         why:
           title: "Why Talk With Us"
           description: |
@@ -87,21 +87,21 @@ en:
         how:
           title: "How This Works"
           description: |
-            This is a completely free service. This is how it works.
+            This is a completely free service and we are not-for-profit. This is how "early access" works.
 
             ### Step 1
-            **You contact us** through our [form](#story), **or we contact you** through a social worker or a friend.
+            **You contact us** through our [form](#access), **or we contact you** through a social worker or a friend.
 
             ### Step 2
-            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about your story and explain what we do.
+            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about you and explain what we do.
 
             ### Step 3
-            **We'll give you private access** to Civically to post your story, read other people's stories, talk with them and figure out what to do next.
+            **We'll give you private access** to Civically to post, read other people's posts and figure out what to do next.
 
             ### Step 4
-            ![launch](/plugins/civically-private/images/people/2.png) **Civically will become publicly available in early 2019**, allowing anyone to sign up and share their story, read your story, ask questions and be part of our community.
+            ![launch](/plugins/civically-private/images/people/2.png) **Civically will become publicly available in early 2019**, allowing anyone to sign up and be part of our community.
 
-            You can stop the conversation at any time. Anything you tell us privately is kept private. Anything you do on Civically can be removed at any time. You have complete control. Check out our <a href='/privacy' class='p-link'>privacy policy</a>, or our  <a href='/about' class='p-link'>About page</a> if you have more questions.
+            You can stop at any time. Anything you tell us privately is kept private. Anything you do on Civically can be removed at any time. You have complete control. Check out our <a href='/privacy' class='p-link'>privacy policy</a>, or our  <a href='/about' class='p-link'>About page</a> if you have more questions.
 
         contact:
           name:
@@ -109,14 +109,14 @@ en:
             placeholder: "What you'd like to be called."
           message:
             label: "Message"
-            placeholder: "Briefly tell us what happened."
+            placeholder: "Briefly tell us what you want help with, or why you want early access to Civically."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
 
       organisation:
         label: "Organisations"
-        title: "How Civically Can Help Your Organisation"
-        subtitle: "If you work with people dealing with the law or government, we can help each other. <a href='#contact' class='p-link'>Get in touch</a>."
+        title: "How Civically Can Work With Your Organisation"
+        subtitle: "If you work with people dealing with the law or government, we can help each other. <a href='#access' class='p-link'>Get in touch</a>."
         contact:
           email:
             label: "Email"

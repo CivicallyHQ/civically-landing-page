@@ -17,13 +17,13 @@ class ContactMailer < ActionMailer::Base
     )
   end
 
-  def story_email(to_address, contact)
+  def launch_email(to_address, contact)
     build_email(
       to_address,
-      template: 'story_mailer',
+      template: 'launch_mailer',
       name: contact['name'],
       email: contact['email'],
-      story: contact['message']
+      launch: contact['message']
     )
   end
 end

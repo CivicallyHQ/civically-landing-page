@@ -11,13 +11,13 @@ en:
       position: %{position}
       message: %{message}
 
-  story_mailer:
-    title: "Story"
-    subject_template: "%{name}'s Story"
+  launch_mailer:
+    title: "Early Access"
+    subject_template: "%{name}"
     text_body_template: |
       name: %{name}
       email: %{email}
-      story: %{story}
+      message: %{message}
 
   site_settings:
     landing_contact_email: "Email to send landing page contacts to."

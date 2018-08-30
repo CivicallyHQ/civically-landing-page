@@ -8,8 +8,8 @@ module Jobs
       raise Discourse::InvalidParameters.new(:to_address) unless args[:to_address].present?
 
       if args[:contact]['type'] === 'launch'
-        message = ContactMailer.story_email(args[:to_address], args[:contact])
-        Email::Sender.new(message, :story_email).send
+        message = ContactMailer.launch_email(args[:to_address], args[:contact])
+        Email::Sender.new(message, :launch_email).send
       else
         message = ContactMailer.contact_email(args[:to_address], args[:contact])
         Email::Sender.new(message, :contact_email).send
