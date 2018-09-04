@@ -12,16 +12,20 @@
     </div>
   {{/if}}
 
-  <div class="input">
-    <label for='contact-name'>{{i18n nameLabel}}<span>*</span></label>
-    {{text-field value=name
-                 placeholderKey=namePlaceholder
-                 autocorrect="off"
-                 autocapitalize="off"}}
-  </div>
+  {{#if showName}}
+    <div class="input">
+      <label for='contact-name'>{{i18n nameLabel}}<span>*</span></label>
+      {{text-field value=name
+                   placeholderKey=namePlaceholder
+                   autocorrect="off"
+                   autocapitalize="off"}}
+    </div>
+  {{/if}}
 
   <div class="input email">
-    <label for='contact-email'>{{i18n emailLabel}}<span>*</span></label>
+    {{#unless isLaunch}}
+      <label for='contact-email'>{{i18n emailLabel}}<span>*</span></label>
+    {{/unless}}
     {{text-field value=email
                  placeholderKey=emailPlaceholder
                  autocorrect="off"
@@ -29,7 +33,7 @@
     <div class="fail">{{emailValidationError}}</div>
   </div>
 
-  {{#if siteSettings.landing_contact_phone_enabled}}
+  {{#if showPhone}}
     <div class="input phone">
       <label for='contact-phone'>{{i18n phoneLabel}}</label>
       {{phone-input phoneValidation="phoneValidation"
@@ -53,14 +57,17 @@
                    autocapitalize="off"}}
     </div>
   {{/if}}
-  <div class="input message">
-    <label>{{i18n messageLabel}}<span>*</span></label>
-    {{textarea value=message
-               class="contact-message"
-               placeholder=(i18n messagePlaceholder)}}
-  </div>
 
-  {{#if forLaunch}}
+  {{#if showMessage}}
+    <div class="input message">
+      <label>{{i18n messageLabel}}<span>*</span></label>
+      {{textarea value=message
+                 class="contact-message"
+                 placeholder=(i18n messagePlaceholder)}}
+    </div>
+  {{/if}}
+
+  {{#if showPrivacy}}
     <div class='privacy'>
       {{{i18n 'landing.launch.contact.privacy'}}}
     </div>
@@ -72,7 +79,9 @@
   {{d-button class='btn btn-large btn-primary'
              disabled=submitDisabled
              action="submitContact"
-             label='landing.contact.submit'}}
-  {{conditional-loading-spinner condition=submitting size="small"}}
-  {{contactResult}}
+             label=submitLabel}}
+  <div class="info">
+    {{conditional-loading-spinner condition=submitting size="small"}}
+    <span class="contact-result">{{contactResult}}</span>
+  </div>
 </div>

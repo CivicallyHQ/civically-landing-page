@@ -1,69 +1,40 @@
 {{#if siteSettings.invite_only}}
-  <a name="access" class="anchor"></a>
-  {{landing-text content="landing.launch.access.title" classes="title centered" url="#access" linkClass='p-link'}}
-{{/if}}
-
-<div class="{{topClasses}}">
-  <div class="main">
-    {{#unless siteSettings.invite_only}}
-      {{landing-text content="landing.tagline" classes="title"}}
-    {{/unless}}
-
-    <div class="left">
-      {{#if siteSettings.invite_only}}
-        {{landing-text content="landing.launch.access.description" classes="small" markdown=true}}
-
-        {{#unless site.mobileView}}
-          <div class="bottom-left">
-            {{static-image name='people/6'}}
-            {{landing-text content="landing.launch.links.why" classes="small" markdown=true}}
-            {{landing-text content="landing.launch.links.how" classes="small" markdown=true}}
-            {{landing-text content="landing.launch.links.organisation" classes="small" markdown=true}}
-          </div>
-        {{/unless}}
-      {{else}}
-        {{landing-text classes='medium' content='landing.links.solve' emoji='man_pilot:t5'}}
-        {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
-        {{landing-text classes='medium' content='landing.links.contribute' emoji='park'}}
-      {{/if}}
-    </div>
-
-    {{#unless siteSettings.invite_only}}
-      {{locale-selection}}
-    {{/unless}}
-  </div>
-  <div class="right">
-    {{#if siteSettings.invite_only}}
-      {{landing-contact type='launch' embedded=true}}
-      {{#unless site.mobileView}}
-        {{static-image name='people/35'}}
-      {{/unless}}
-    {{else}}
-      {{landing-text content='landing.sign_up' classes="large"}}
-      {{landing-text content="landing.sign_up_tagline" classes="small"}}
-      {{outlet 'create-account'}}
-    {{/if}}
-  </div>
-</div>
-
-{{#if siteSettings.invite_only}}
   <div class="why centered">
     <a name="why" class="anchor"></a>
     {{landing-text classes="title centered" content="landing.launch.why.title" url="#why" linkClass='p-link'}}
     {{landing-text classes="small" content="landing.launch.why.description" markdown=true}}
-    <a href='/start#access' class="btn btn-large btn-primary">
-      {{i18n 'landing.launch.access.title'}}
+    <a href='/start#banner' class="btn btn-large btn-primary">
+      {{i18n 'landing.launch.contact.submit'}}
     </a>
   </div>
   <div class="how centered">
     <a name="how" class="anchor"></a>
     {{landing-text classes="title centered" content="landing.launch.how.title" url="#how" linkClass='p-link'}}
     {{landing-text classes="small" content="landing.launch.how.description" markdown=true}}
-    <a href='/start#access' class="btn btn-large btn-primary">
-      {{i18n 'landing.launch.access.title'}}
+    <a href='/start#banner' class="btn btn-large btn-primary">
+      {{i18n 'landing.launch.contact.submit'}}
     </a>
   </div>
 {{else}}
+  <div class="{{topClasses}}">
+    {{landing-text content="landing.launch.links.why" classes="large" markdown=true}}
+    {{landing-text content="landing.launch.links.how" classes="large" markdown=true}}
+    {{landing-text content="landing.launch.links.organisation" classes="large" markdown=true}}
+    <div class="main">
+      {{landing-text content="landing.tagline" classes="title"}}
+      <div class="left">
+        {{landing-text classes='medium' content='landing.links.solve' emoji='man_pilot:t5'}}
+        {{landing-text classes='medium' content='landing.links.technology' emoji='woman_technologist:t2'}}
+        {{landing-text classes='medium' content='landing.links.contribute' emoji='park'}}
+      </div>
+      {{locale-selection}}
+    </div>
+    <div class="right">
+      {{landing-text content='landing.sign_up' classes="large"}}
+      {{landing-text content="landing.sign_up_tagline" classes="small"}}
+      {{outlet 'create-account'}}
+    </div>
+  </div>
   <div class="scroll-to-map centered" {{action 'scrollToMap'}}>
     {{landing-text classes="medium centered" content="landing.links.map" emoji="world_map"}}
     {{d-icon 'chevron-down'}}

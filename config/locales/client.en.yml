@@ -51,28 +51,16 @@ en:
       launch:
         banner:
           title: "Welcome to Civically"
-          subtitle: "Your ally when dealing with law or government."
+          subtitle: Legal trouble? Find the system confusing? We've built Civically to help you. To make it work, we need your help to test it.
           launching: "Launching Early 2019"
-          link: "Get Early Access"
-
-        access:
-          title: "Get Early Access"
-          description: |
-            Got a problem, but can't afford a lawyer? Feel like the system is confusing or unfair? Tell us about it.
-
-            <div class="contact-type highlight">
-            If you're in an emergency, contact your local emergency services.
-            </div>
-
-            We can't give you legal advice, but we can help you gather your thoughts and make the right move.
+          links:
+            why: Why help us?
+            how: How this works
+            organisation: For organisations
 
         legal: "Do you work with people dealing with legal or government issues?"
-        links:
-          why: "[Why talk with us?](#why)"
-          how: "[How this works.](#how)"
-          organisation: "[How we work with organisations.](/organisations#banner)"
         why:
-          title: "Why Talk With Us"
+          title: "Why Help Us Test Civically"
           description: |
             Trying to solve a problem through lawyers or the government can make us feel **angry, confused and powerless**.
 
@@ -80,17 +68,15 @@ en:
 
             **You're not alone**. In fact, this is how most people feel. That's why we built Civically. It's a place that makes it all a bit clearer and easier, and puts you in control.
 
-            ![future](/plugins/civically-private/images/people/13.png) We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Talk to us about whats happened, talk to other folks dealing with similar problems and find useful services.
-
-            Civically is running a trial of its platform in 2018. Before we launch in early 2019 we are giving early access to people who . Those stories will help us create the **right kind of community** for Civically to work.
+            ![future](/plugins/civically-private/images/people/13.png) We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Before we launch in early 2019, we're giving early access to some folks to help us test. Those testers will help us create the **right kind of community** for Civically to work.
 
         how:
           title: "How This Works"
           description: |
-            This is a completely free service and we are not-for-profit. This is how "early access" works.
+            This is a completely free service and we are not-for-profit. This is how you can help us test Civically.
 
             ### Step 1
-            **You contact us** through our [form](#access), **or we contact you** through a social worker or a friend.
+            **[You contact us](#banner)**, or we contact you through a social worker or a friend.
 
             ### Step 2
             ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about you and explain what we do.
@@ -101,7 +87,7 @@ en:
             ### Step 4
             ![launch](/plugins/civically-private/images/people/2.png) **Civically will become publicly available in early 2019**, allowing anyone to sign up and be part of our community.
 
-            You can stop at any time. Anything you tell us privately is kept private. Anything you do on Civically can be removed at any time. You have complete control. Check out our <a href='/privacy' class='p-link'>privacy policy</a>, or our  <a href='/about' class='p-link'>About page</a> if you have more questions.
+            You can stop at any time. Anything you tell us privately is kept private. Anything you do on Civically can be removed at any time. You have complete control. Check out our <a href='/privacy' class='p-link'>privacy policy</a>, or our  <a href='/about' class='p-link'>about page</a> if you have more questions.
 
         contact:
           name:
@@ -112,11 +98,12 @@ en:
             placeholder: "Briefly tell us why you want early access to Civically."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
+          submit: "I want to help"
 
       organisation:
         label: "Organisations"
         title: "How Civically Can Work With Your Organisation"
-        subtitle: "If you work with people dealing with the law or government, we can help each other. <a href='#access' class='p-link'>Get in touch</a>."
+        subtitle: "If you work with people dealing with the law or government, we can help each other. <a href='#banner' class='p-link'>Get in touch</a>."
         contact:
           email:
             label: "Email"

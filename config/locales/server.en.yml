@@ -13,11 +13,9 @@ en:
 
   launch_mailer:
     title: "Early Access"
-    subject_template: "Early access for %{name}"
+    subject_template: "Early Access for %{email}"
     text_body_template: |
-      name: %{name}
       email: %{email}
-      message: %{message}
 
   site_settings:
     landing_contact_email: "Email to send landing page contacts to."

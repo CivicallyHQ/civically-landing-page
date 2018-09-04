@@ -93,16 +93,16 @@
 
       &.invite-only {
         margin: 0;
+        text-align: center;
+        display: block;
 
-        .left {
-          .static-image {
-            float: right;
-            margin-top: 0;
-            margin-right: 60px;
+        .p-text {
+          display: block;
+          width: 500px;
+          margin: 0 auto;
 
-            img {
-              width: 70px;
-            }
+          a {
+            @extend .p-link;
           }
         }
       }
@@ -491,6 +491,10 @@
 
   .modal-footer {
     padding: 15px;
+
+    .info {
+      display: inline-block;
+    }
   }
 }
 
@@ -506,10 +510,6 @@
     }
   }
 
-  &.launch {
-    margin-top: 20px;
-  }
-
   .modal-body {
     display: inline-block;
     overflow: initial;
@@ -521,7 +521,7 @@
     padding: 0;
   }
 
-  input:not(#contact-phone), .contact-message {
+  input, .contact-message {
     padding: 7px 10px;
     width: 350px;
   }
@@ -531,7 +531,8 @@
     margin-top: 10px;
   }
 
-  #contact-phone {
+  input#contact-phone {
+    padding: initial;
     line-height: 28px !important;
     width: 372px;
   }
@@ -623,27 +624,47 @@
 }
 
 .landing-contact.launch {
-  .message {
-    height: initial;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
 
-    textarea {
-      margin: 0;
-      width: 500px;
-      height: 150px;
-    }
+  .modal-body {
+    flex: 1;
   }
 
-  .privacy {
-    max-width: 500px;
-    font-size: 0.9em;
-    margin: 5px 0;
+  // todo: replace with em;
+  input, .btn {
+    font-size: 20px;
   }
 
   .input.email {
-    height: 85px;
+    height: 70px;
 
     .fail {
-      font-size: 0.9em;
+      font-size: 0.85em;
+    }
+
+    input {
+      border-radius: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid $tertiary;
+    }
+  }
+
+  .modal-footer {
+    padding: 0;
+    margin: 0 0 0 15px;
+    border: none;
+
+    .btn {
+      margin: 0;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 5px;
+      right: 0;
     }
   }
 }
@@ -703,14 +724,8 @@
 @media all and (max-width: 1024px) and (orientation: landscape), screen and (max-height: 775px) {
   .landing-page.start {
     .launch-landing {
-      margin-top: -20px;
       height: calc(100vh - 60px);
-    }
-
-    .left {
-      .static-image img {
-        width: 80px;
-      }
+      min-height: 600px;
     }
   }
 }

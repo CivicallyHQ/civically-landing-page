@@ -3,19 +3,28 @@ import InputValidation from 'discourse/models/input-validation';
 import { sendContact } from '../lib/landing-utilities';
 import { emailValid } from 'discourse/lib/utilities';
 
-const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 'message'];
+const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 'message', 'submit'];
 
 const customTextKeys = {
   individual: [],
   organisation: ['email', 'phone', 'institution'],
   government: ['email', 'institution', 'position'],
-  launch: ['name', 'message']
+  launch: ['submit']
 };
 
 export default Ember.Component.extend({
   formSubmitted: false,
   classNameBindings: [':landing-contact', 'type'],
   type: 'individual',
+  isLaunch: Ember.computed.equal('type', 'launch'),
+  showMessage: Ember.computed.not('isLaunch'),
+  showName: Ember.computed.not('isLaunch'),
+  showPrivacy: false,
+
+  @computed('type')
+  showPhone(type) {
+    return this.siteSettings.landing_contact_phone_enabled && type !== 'launch';
+  },
 
   @on('init')
   setupTypes() {
@@ -55,6 +64,8 @@ export default Ember.Component.extend({
         if (type !== 'launch') {
           props['title'] = `${parentKey}.title`;
         }
+      } else if (k === 'submit') {
+        props['submitLabel'] = `${parentKey}.submit`;
       } else {
         props[`${k}Label`] = `${parentKey}.${k}.label`;
         props[`${k}Placeholder`] = `${parentKey}.${k}.placeholder`;
@@ -69,21 +80,24 @@ export default Ember.Component.extend({
     return this.get('type') === 'government' || this.get('type') === 'organisation';
   },
 
-  forLaunch: Ember.computed.equal('type', 'launch'),
-
   @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'messageValidation', 'formSubmitted', 'type')
   submitDisabled() {
     if (this.get('formSubmitted')) return true;
-    if (this.get('nameValidation.failed')) return true;
+    if (this.get('showName')) {
+      if (this.get('nameValidation.failed')) return true;
+    }
     if (this.get('emailValidation.failed')) return true;
-    if (this.get('phoneValidation.failed')) return true;
-
+    if (this.get('showPhone')) {
+      if (this.get('phoneValidation.failed')) return true;
+    }
     if (this.get('forInstitution')) {
       if (this.get('institutionValidation.failed')) return true;
       if (this.get('positionValidation.failed')) return true;
     }
 
-    if (this.get('messageValidation.failed')) return true;
+    if (this.get('showMessage')) {
+      if (this.get('messageValidation.failed')) return true;
+    }
 
     return false;
   },
