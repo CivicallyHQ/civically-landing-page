@@ -15,6 +15,11 @@ export default Ember.Controller.extend({
     return path.toLowerCase().indexOf('start') > -1;
   },
 
+  @computed('isStart')
+  showBanner(isStart) {
+    return this.siteSettings.invite_only && (!this.site.mobileView || isStart);
+  },
+
   @computed
   topClasses() {
     let classes = 'top';
