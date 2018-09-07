@@ -41,6 +41,12 @@
     </div>
   {{/if}}
 
+  {{#if showLocation}}
+    <div class="input location">
+      {{input value=location placeholder=(i18n locationPlaceholder)}}
+    </div>
+  {{/if}}
+
   {{#if forInstitution}}
     <div class="input institution">
       <label for='contact-institution'>{{i18n institutionLabel}}<span>*</span></label>

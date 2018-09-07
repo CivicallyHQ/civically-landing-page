@@ -42,6 +42,9 @@ en:
         message:
           label: "Message"
           placeholder: "Add a message."
+        location:
+          location: "Location"
+          placeholder: "City or town you live in."
         submit: "Submit"
         succeded: "Sent. We'll be in touch shortly."
 

@@ -12,10 +12,11 @@ en:
       message: %{message}
 
   launch_mailer:
-    title: "Early Access"
-    subject_template: "Early Access for %{email}"
+    title: "Civically Test"
+    subject_template: "Civically Test: %{email}"
     text_body_template: |
       email: %{email}
+      location: %{location}
 
   site_settings:
     landing_contact_email: "Email to send landing page contacts to."

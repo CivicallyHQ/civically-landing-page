@@ -21,7 +21,8 @@ class ContactMailer < ActionMailer::Base
     build_email(
       to_address,
       template: 'launch_mailer',
-      email: contact['email']
+      email: contact['email'],
+      location: contact['location']
     )
   end
 end

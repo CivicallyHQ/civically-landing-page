@@ -624,12 +624,11 @@
 }
 
 .landing-contact.launch {
-  margin-top: 20px;
-  display: flex;
-  position: relative;
+  margin: 20px 0;
+  width: 100%;
 
   .modal-body {
-    flex: 1;
+    width: 100%;
   }
 
   // todo: replace with em;
@@ -637,8 +636,9 @@
     font-size: 20px;
   }
 
-  .input.email {
+  .input.email, .input.location {
     height: 70px;
+
 
     .fail {
       font-size: 0.85em;
@@ -654,17 +654,11 @@
 
   .modal-footer {
     padding: 0;
-    margin: 0 0 0 15px;
+    margin: 0;
     border: none;
 
-    .btn {
-      margin: 0;
-    }
-
     .info {
-      position: absolute;
-      bottom: 5px;
-      right: 0;
+      display: inline-block;
     }
   }
 }

@@ -40,7 +40,7 @@ after_initialize do
 
   class CivicallyLanding::ContactController < ::ApplicationController
     def send_contact_email
-      params.permit(:type, :name, :email, :phone, :institution, :position, :message)
+      params.permit(:type, :name, :email, :phone, :location, :institution, :position, :message)
       contact = {}
 
       params.each do |key, value|

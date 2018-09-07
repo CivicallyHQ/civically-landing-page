@@ -3,7 +3,7 @@ import InputValidation from 'discourse/models/input-validation';
 import { sendContact } from '../lib/landing-utilities';
 import { emailValid } from 'discourse/lib/utilities';
 
-const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 'message', 'submit'];
+const textKeys = ['title', 'name', 'email', 'phone', 'institution', 'position', 'location', 'message', 'submit'];
 
 const customTextKeys = {
   individual: [],
@@ -20,6 +20,7 @@ export default Ember.Component.extend({
   showMessage: Ember.computed.not('isLaunch'),
   showName: Ember.computed.not('isLaunch'),
   showPrivacy: false,
+  showLocation: Ember.computed.alias('isLaunch'),
 
   @computed('type')
   showPhone(type) {
@@ -80,16 +81,24 @@ export default Ember.Component.extend({
     return this.get('type') === 'government' || this.get('type') === 'organisation';
   },
 
-  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'messageValidation', 'formSubmitted', 'type')
+  @computed('nameValidation', 'emailValidation', 'phoneValidation', 'institutionValidation', 'positionValidation', 'locationValidation', 'messageValidation', 'formSubmitted', 'type')
   submitDisabled() {
     if (this.get('formSubmitted')) return true;
+
     if (this.get('showName')) {
       if (this.get('nameValidation.failed')) return true;
     }
+
     if (this.get('emailValidation.failed')) return true;
+
     if (this.get('showPhone')) {
       if (this.get('phoneValidation.failed')) return true;
     }
+
+    if (this.get('showLocation')) {
+      if (this.get('locationValidation.failed')) return true;
+    }
+
     if (this.get('forInstitution')) {
       if (this.get('institutionValidation.failed')) return true;
       if (this.get('positionValidation.failed')) return true;
@@ -126,6 +135,11 @@ export default Ember.Component.extend({
   @computed('emailValidation')
   emailValidationError(validation) {
     return validation && validation.failed && validation.reason ? validation.reason : null;
+  },
+
+  @computed('location')
+  locationValidation() {
+    return this.textValidation('location');
   },
 
   @computed('name')
@@ -188,7 +202,19 @@ export default Ember.Component.extend({
     submitContact() {
       if (this.get('submitDisabled')) return false;
 
-      let data = this.getProperties('type', 'name', 'email', 'message');
+      let data = this.getProperties('type', 'email');
+
+      if (this.get('showName')) {
+        data['name'] = this.get('name');
+      }
+
+      if (this.get('showLocation')) {
+        data['location'] = this.get('location');
+      }
+
+      if (this.get('showMessage')) {
+        data['message'] = this.get('message');
+      }
 
       const phone = this.get('phone');
       const phoneEnabled = Discourse.SiteSettings.landing_contact_phone_enabled;
