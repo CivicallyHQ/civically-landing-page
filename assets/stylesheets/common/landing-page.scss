@@ -633,7 +633,7 @@
 
   // todo: replace with em;
   input, .btn {
-    font-size: 20px;
+    @extend .p-text.small;
   }
 
   .input.email, .input.location {
