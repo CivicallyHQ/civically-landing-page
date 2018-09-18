@@ -54,11 +54,13 @@ en:
       launch:
         banner:
           title: "Welcome to Civically"
-          subtitle: Legal trouble? Struggling with government? Find the system confusing? Help us test our solution.
+          subtitle: A place to discuss legal problems, and how to deal with the system.
+          test: "Help us test Civically"
+          subscribe: "Subscribe to our newsletter"
           launching: "Launching Early 2019"
           links:
-            why: Why help us?
-            how: How this works
+            why: Why help us test?
+            how: How testing works
             organisation: For organisations
 
         legal: "Do you work with people dealing with legal or government issues?"
@@ -74,7 +76,7 @@ en:
             ![future](/plugins/civically-private/images/people/13.png) We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Before we launch in early 2019, we're giving early access to some folks to help us test. Those testers will help us create the **right kind of community** for Civically to work.
 
         how:
-          title: "How This Works"
+          title: "How Testing Works"
           description: |
             This is a completely free service and we are not-for-profit. This is how you can help us test Civically.
 
@@ -101,7 +103,7 @@ en:
             placeholder: "Briefly tell us why you want early access to Civically."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
-          submit: "I want to help"
+          submit: "Help Us Test"
 
       organisation:
         label: "Organisations"
