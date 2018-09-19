@@ -18,10 +18,32 @@
 
 .start {
   .launch-landing {
+    position: relative;
     height: calc(100vh - 80px);
 
     .site-banner {
       height: 100%;
+    }
+
+    .blog-notice-container {
+      position: absolute;
+      top: 10px;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .blog-notice {
+      background-color: $secondary;
+      padding: 10px;
+      border: 2px solid $tertiary;
+      border-radius: 4px;
+      font-weight: 700;
+
+      a.notice {
+        color: $danger;
+        margin-right: 5px;
+      }
     }
   }
 }

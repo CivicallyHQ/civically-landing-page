@@ -3,6 +3,19 @@
     <div class="launch-landing">
       <a name="banner"></a>
       {{site-banner}}
+
+      {{#if showBlogNotice}}
+        <div class="blog-notice-container">
+          <div class="blog-notice">
+            <a href="https://blog.civically.io"
+               class="notice"
+               target="_blank">New Blog Post!</a>
+            <a href="https://blog.civically.io/we-need-a-better-way-of-talking-about-legal-problems/"
+               class="post-title p-link"
+               target="_blank">We need a better way of talking about legal problems</a>
+          </div>
+        </div>
+      {{/if}}
     </div>
   {{/if}}
   {{outlet 'content'}}

@@ -20,6 +20,11 @@ export default Ember.Controller.extend({
     return this.siteSettings.invite_only && (!this.site.mobileView || isStart);
   },
 
+  @computed('isStart')
+  showBlogNotice(isStart) {
+    return isStart;
+  },
+
   @computed
   topClasses() {
     let classes = 'top';
