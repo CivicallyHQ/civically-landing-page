@@ -54,9 +54,9 @@ en:
       launch:
         banner:
           title: "Welcome to Civically"
-          subtitle: A place to discuss legal problems, and how to deal with the system.
+          subtitle: A place to discuss legal problems, dealing with government and community life.
           test: "Help us test Civically"
-          subscribe: "Subscribe to our newsletter"
+          subscribe: "Subscribe to our <a href='https://blog.civically.io' class='p-link' target='_blank'>blog</a>"
           launching: "Launching Early 2019"
           links:
             why: Why help us test?
@@ -67,11 +67,11 @@ en:
         why:
           title: "Why Help Us Test Civically"
           description: |
-            Trying to solve a problem through lawyers or the government can make us feel **angry, confused and powerless**.
+            Trying to solve a problem through lawyers or the government can make us feel **angry, confused and powerless**. Gone are the days when you could rely on a local community to help you through.
 
-            ![not-alone](/plugins/civically-private/images/people/18.png) Lawyers can be expensive and intimidating. Government can be frustratingly slow and bureaucratic. It can be hard to find people who make sense or understand what you're going through. It can feel like **the system is large, uncaring and out of our control**.
+            ![not-alone](/plugins/civically-private/images/people/18.png) It's hard to find people who make sense or understand what you're going through. It can feel like **the system is large, uncaring and out of our control** and that everyone is too busy living their lives.
 
-            **You're not alone**. In fact, this is how most people feel. That's why we built Civically. It's a place that makes it all a bit clearer and easier, and puts you in control.
+            **You're not alone**. In fact, this is how most people feel. That's why we built Civically. It's a place that makes it all a bit clearer and easier, puts you in control and connects you with people who want to help.
 
             ![future](/plugins/civically-private/images/people/13.png) We've built a lot of clever technology to do this, but to make Civically a reality **we need your help**. Before we launch in early 2019, we're giving early access to some folks to help us test. Those testers will help us create the **right kind of community** for Civically to work.
 
@@ -103,7 +103,7 @@ en:
             placeholder: "Briefly tell us why you want early access to Civically."
           privacy: >
             All correspondence is kept private. See our <a href='/privacy' class='p-link'>privacy policy</a> for details.
-          submit: "Help Us Test"
+          submit: "Help us test"
 
       organisation:
         label: "Organisations"
