@@ -1,0 +1,174 @@
+fr:
+  js:
+    landing:
+      title: "Civically"
+      tagline: "La plate-forme populaire"
+      links:
+        solve: "Naviguer dans le gouvernement et la loi."
+        technology: "Faites partie de votre communauté locale."
+        contribute: "Aidez à construire un espace public en ligne."
+        map: "Votre ville est sur la carte?"
+      sign_up: "S'inscrire"
+      sign_up_tagline: "Gratuit, sécurisé et sans publicité. Nous ne vendons pas de données."
+      footer_legal_title: "Civil Core Pty Ltd. ACN 618 525 983. Tous droits réservés."
+      footer_legal_text: >
+        Civiquement, ce n'est pas un cabinet d'avocats ou un substitut d'un avocat ou d'un cabinet d'avocats. Les communications entre vous et Civically sont protégées par notre [Privacy Policy] (/ privacy), mais pas par le privilège avocat / client ou comme produit professionnel. Nous ne pouvons fournir aucun type de conseil, explication, opinion ou recommandation sur d'éventuels droits, recours, moyens de défense, options, choix de formulaires ou stratégies. Votre accès à notre site Web est soumis à nos [Conditions d'utilisation] (/ tos).
+      contact:
+        title: "Contact"
+        failed: "Les coordonnées n'ont pas pu être envoyées. Veuillez envoyer un email à contact@civically.io."
+        name:
+          label: "Prénom"
+          placeholder: "Ton nom complet."
+        email:
+          label: "Email"
+          placeholder: "Votre email"
+        phone:
+          label: "Téléphone"
+          placeholder: "Votre numéro de téléphone."
+          valid: "<i class='fa fa-check'></i>Nombre valide"
+          invalid: "<i class='fa fa-times'></i>Numéro invalide"
+        institution:
+          label: "Institution"
+          placeholder: "Où vous travaillez"
+        position:
+          label: "Position"
+          placeholder: "Votre titre."
+        message:
+          label: "Message"
+          placeholder: "Ajouter un message."
+        location:
+          location: "Emplacement"
+          placeholder: "Ville ou village dans lequel vous vivez."
+        submit: "Soumettre"
+        succeded: "Envoyé. Nous vous contacterons sous peu."
+
+      donate:
+        link: "Contactez-nous à propos d'un don"
+
+      launch:
+        banner:
+          title: "Bienvenue chez Civically"
+          subtitle: "Un lieu pour discuter de problèmes juridiques, traiter avec le gouvernement et la vie communautaire."
+          test: "Aidez-nous à tester civiquement"
+          subscribe: "Abonnez-vous à notre <a href='https://blog.civically.io' class='p-link' target='_blank'>blog</a>"
+          launching: "Lancement début 2019"
+          links:
+            why: "Pourquoi nous aider à tester?"
+            how: Comment fonctionne le test
+            organisation: Pour les organisations
+
+        legal: "Travaillez-vous avec des personnes aux prises avec des problèmes juridiques ou gouvernementaux?"
+        why:
+          title: "Pourquoi nous aider à tester Civically"
+          description: |
+            Essayer de résoudre un problème par le biais d'avocats ou du gouvernement peut nous faire sentir ** en colère, confus et impuissant **. Fini le temps où vous pouviez compter sur une communauté locale pour vous aider.
+
+            ! [pas-seul] (/ plugins / civiquement-privé / images / people / 18.png) Il est difficile de trouver des personnes qui ont un sens ou comprennent ce que vous vivez. On peut avoir l’impression que ** le système est volumineux, insouciant et hors de notre contrôle ** et que tout le monde est trop occupé par la vie.
+
+            **Tu n'es pas seul**. En fait, c'est ce que la plupart des gens ressentent. C'est pourquoi nous avons construit Civiquement. C'est un endroit qui rend les choses plus claires et plus faciles, vous permet de garder le contrôle et vous met en contact avec des personnes qui veulent aider.
+
+            ! [future] (/ plugins / civiquement-privé / images / people / 13.png) Nous avons construit beaucoup de technologies intelligentes pour le faire, mais pour que Civically devienne une réalité **, nous avons besoin de votre aide **. Avant notre lancement au début de 2019, nous donnons rapidement accès à des personnes pour nous aider à tester. Ces testeurs nous aideront à créer le ** bon type de communauté ** pour que Civically fonctionne.
+        how:
+          title: "Comment fonctionne le test"
+          description: |
+            Ce service est entièrement gratuit et nous sommes à but non lucratif. Voici comment vous pouvez nous aider à tester civiquement.
+
+            ### Étape 1
+            ** [Vous nous contactez] (# banner) **, ou nous vous contactons par le biais d'un travailleur social ou d'un ami.
+
+            ### Étape 2
+
+            ![contact](/plugins/civically-private/images/people/14.png) **We'll talk** in person, on the phone or by email to find out a bit more about you and explain what we do.
+
+            ### Étape 3
+
+            ** Nous vous donnerons un accès privé ** à Civically pour poster, lire les posts des autres et voir ce qu'il faut faire ensuite.
+
+            ### Étape 4
+
+            ! [launch] (/ plugins / civiquement-privé / images / people / 2.png) ** Civiquement deviendra accessible au public début 2019 **, permettant à tout le monde de s'inscrire et de faire partie de notre communauté.
+
+            Vous pouvez vous arrêter à tout moment. Tout ce que vous nous dites en privé reste privé. Tout ce que vous faites sur Civically peut être supprimé à tout moment. Vous avez le contrôle complet. Consultez notre <a href='/privacy' class='p-link'>politique de confidentialité</a> ou notre page <a href='/about' class='p-link'>à propos</a> si vous avez d'autres questions.
+        contact:
+          name:
+            label: "Nom ou pseudo"
+            placeholder: "Comment aimerais-tu être appelé?"
+          message:
+            label: "Message"
+            placeholder: "Dites-nous brièvement pourquoi vous souhaitez un accès rapide à Civically."
+          privacy: >
+            Toute correspondance est gardée privée. Consultez notre <a href='/privacy' class='p-link'>politique de confidentialité</a> pour plus de détails.
+          submit: "Aidez-nous à tester"
+
+      organisation:
+        label: "Organisations"
+        title: "Comment civiquement peut travailler avec votre organisation"
+        subtitle: "Si vous travaillez avec des personnes qui traitent avec la loi ou le gouvernement, nous pouvons nous entraider. <a href='#banner' class='p-link'>Entrer en contact</a>."
+        contact:
+          email:
+            label: "Email"
+            placeholder: "Votre email de travail."
+          phone:
+            label: "Téléphone"
+            placeholder: "Votre numéro de téléphone professionnel."
+          institution:
+            label: "Organisation"
+            placeholder: "Organisation dans laquelle vous travaillez."
+        people:
+          title: Trouvez des personnes qui ont besoin d'aide.
+          description: |
+            Lorsqu'ils traitent avec la loi ou le gouvernement, la plupart ** des gens préfèrent l'aide de personnes comme eux ** plutôt que d'un expert ou d'une autorité ([Rapport sur le projet de justice mondiale] (https://worldjusticeproject.org/sites/default/files/documents/WJP_Access-Justice_January_2018_LR_0.pdf)).
+
+            Civically est une communauté construite pour connecter les personnes qui ont besoin d'aide avec des "personnes comme elles", tout en leur donnant accès à des informations et à des services de qualité. Notre objectif est d'éliminer les barrières entre les personnes et le «système».
+
+            En faisant surface dans la "zone grise" informelle de la vie civique, Civically peut être un ** centre d'échange en ligne ** pour le travail de votre organisation.
+        healthy:
+          title: Dans un environnement sain.
+          description: |
+            Les plateformes sociales s'appuient généralement sur les données des utilisateurs pour générer des bénéfices. Ils sont conçus pour polariser ou pour une gratification instantanée. Des informations trompeuses ou trompeuses peuvent se propager facilement.
+
+            Utilise à la fois ** les modérateurs humains et une technologie sophistiquée ** pour favoriser une discussion constructive qui diffuse des informations précises et utiles.
+
+            Nous ne vendons pas et ne vendrons jamais les données des utilisateurs. Nous ** respectons vraiment la vie privée et travaillons dur pour créer un environnement sain **.
+        help:
+          title: Collaborez localement et globalement.
+          description: |
+            Les personnes qui traitent avec la loi ou le gouvernement ont souvent besoin de l'aide de plusieurs sources. Il est souvent difficile pour ** toutes les parties prenantes de coordonner efficacement **, ou même de savoir à qui parler.
+
+            Civically est conçu pour faciliter la recherche et la collaboration entre toutes les parties prenantes. Civically est également une plate-forme mondiale où ** la collaboration et le partage des connaissances ** peuvent facilement transcender les frontières.
+        tech:
+          title: "Sur une plate-forme construite à l'échelle. Le travail communautaire est nécessairement spécifique à la communauté. De même, la technologie civique est souvent à petite échelle. Cela rend ** difficile la mise au point d'une technologie civique comparable à la technologie grand public **.\nCivically est conçu pour ** fonctionner localement et s’adapter à l’échelle mondiale **. Notre Civ Store App Store (le premier du genre) offrira des services communautaires en ligne locaux et généraux en un seul endroit. Notre App Store apporte les ** avantages d'échelle et de normalisation d'un app store commercial aux services civiques en ligne **."
+
+        non_profit:
+          title: 100% gratuit et sans but lucratif.
+          description: |
+            ** Civiquement, c'est totalement gratuit **. Nous prévoyons de lancer une entreprise de services en 2020 pour soutenir nos travaux. Tous les profits seront réinvestis dans Civically pour soutenir notre mission.
+
+            Au cours de sa phase de développement, Civically opérait comme une société australienne. À mesure que nous nous rapprochons de notre lancement, nous explorons activement les structures à but non lucratif en Australie et ailleurs.
+        open_source:
+          title: Open source et testés au combat.
+          description: |
+            Civically est né du travail sur une ** plate-forme logicielle de discussion leader sur le marché ** ([Discourse] (https://discourse.org)). De nombreuses fonctionnalités de Civically sont déjà utilisées dans des milliers de communautés en ligne à travers le monde.
+
+            Cela signifie qu'avant même de lancer **, nous savons que nos fonctionnalités fonctionnent et sont conviviales **. Cela signifie également qu'en travaillant avec Civically, vous soutenez le travail précieux de nombreuses autres organisations à vocation communautaire.
+      team:
+        label: "Renseignez-vous sur notre équipe"
+
+      individual:
+        label: "Personnes"
+
+      government:
+        label: "Gouvernements"
+        contact:
+          email:
+            placeholder: "Votre email professionnel"
+          phone:
+            placeholder: "Votre numéro de téléphone professionnel"
+          institution:
+            label: "Gouvernement"
+            placeholder: "Gouvernement vous travaillez à"
+
+      faq:
+        overlap: "Si vous pensez que votre lieu doit être divisé en deux communautés ou plus, ou combiné avec un autre lieu, vous pouvez poster un vote à ce sujet à votre place."
+        split: "Une place existante sur le plan civique sera divisée en plusieurs communautés si une majorité des utilisateurs de la place existante votent en ce sens."
+        combined: "Deux ou plusieurs communautés civiques existantes seront combinées en un lieu unique si la majorité des utilisateurs de chaque lieu existant votent en leur faveur."

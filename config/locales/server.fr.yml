@@ -1,0 +1,22 @@
+fr:
+  contact_mailer:
+    title: "Nouveau contact"
+    subject_template: "Nouveau %{type} contact de %{name}"
+    text_body_template: |
+      type:%{type}
+      prénom:%{name}
+      email:%{email}
+      téléphone:%{phone}
+      institution:%{institution}
+      position:%{position}
+      message:%{message}
+  launch_mailer:
+    title: "Test Civically "
+    subject_template: "Test Civically : %{email}"
+    text_body_template: |
+      email:%{email}
+      emplacement:%{location}
+  site_settings:
+    landing_contact_email: "Email pour envoyer les contacts de la page de destination à."
+    landing_contact_phone_enabled: "Ajoutez une entrée de téléphone dans le formulaire de contact de destination."
+    landing_visible_locales: "Paramètres régionaux visibles sur la page de destination."
